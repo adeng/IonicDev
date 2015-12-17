@@ -6,17 +6,21 @@
 </ion-navbar>
 
 <ion-content class="page3">
-  <ion-segment [(ngModel)]="display" class="display" (click)="fillList(display)">
-    <ion-segment-button value="have" checked="true">
+  <ion-segment class="display">
+    <ion-segment-button value="have" checked="true" (click)="fillList('have')">
       Have
     </ion-segment-button>
-    <ion-segment-button value="want">
+    <ion-segment-button value="want" (click)="fillList('want')">
       Want
     </ion-segment-button>
-    <ion-segment-button value="interested">
+    <ion-segment-button value="interested" (click)="fillList('interested')">
       Interested
     </ion-segment-button>
   </ion-segment>
   
-  
+  <ion-list>
+    <ion-item *ngFor="#ticker of tickers">
+      {{ticker}}
+    </ion-item>
+  </ion-list>
 </ion-content>

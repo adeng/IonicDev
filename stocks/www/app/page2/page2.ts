@@ -1,4 +1,4 @@
-import {Page, Storage, SqlStorage} from 'ionic-framework/ionic';
+import {Page, Storage, SqlStorage, Popup} from 'ionic-framework/ionic';
 import {Control, ControlGroup} from 'angular2/angular2';
 
 @Page({
@@ -13,14 +13,38 @@ export class Page2 {
   });
   
   storage: Storage;
+  popup: Popup;
   
-  constructor() {
-    this.storage = new Storage(SqlStorage);
+  constructor(popup: Popup) {
+    this.storage = new Storage(SqlStorage, {name: 'stocks'});
+    this.popup = popup;
   }
   
   processInput() {
+    /* this.storage.query('CREATE TABLE IF NOT EXISTS ? (ticker varchar(10))', [this.cat.value]).then(() => {
+      this.storage.query('INSERT INTO ? (ticker) VALUES (?)', [this.cat.value, this.ticker.value]).then(() => {
+        console.log("Stored " + this.ticker.value + " in " + this.cat.value);
+      })
+    }); */
+    
     this.storage.get(this.cat.value).then((value) => {
-      this.storage.set(this.cat.value, value + "," + this.ticker.value);
+      if( value == null ) {
+        this.storage.set(this.cat.value, this.ticker.value);
+        return;
+      }
+      
+      let tv = value.split(",");
+      if( tv.indexOf(this.ticker.value) != -1 ) {
+        this.popup.alert({
+          title: "Error!",
+          template: "This ticker has already been added to your watchlist!"
+        });
+        return;
+      }
+      
+      tv.push(this.ticker.value);
+      let v = tv.join(",");
+      this.storage.set(this.cat.value, v);
     });
   }
 }

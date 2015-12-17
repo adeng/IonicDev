@@ -19,5 +19,9 @@
     "typescript": "^1.7.3"
   },
   "name": "stocks",
-  "description": "stocks: An Ionic project"
+  "description": "stocks: An Ionic project",
+  "cordovaPlugins": [
+    "cordova-sqlite-storage"
+  ],
+  "cordovaPlatforms": []
 }
