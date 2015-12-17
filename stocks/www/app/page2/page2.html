@@ -5,31 +5,35 @@
   </ion-title>
 </ion-navbar>
 
-<ion-content padding class="page2">
-  <h2>Add a Ticker</h2>
-  
+<ion-content class="page2">
   <form [ngFormModel]="tickerForm">
-    <ion-input fixed-label>
-      <ion-label>Ticker</ion-label>
-      <input type="text" ngControl="ticker" />
-    </ion-input>
+    <ion-card>
+      <ion-card-header>
+        Add a Ticker
+      </ion-card-header>
+      <ion-input fixed-label>
+        <ion-label>Ticker</ion-label>
+        <input type="text" ngControl="ticker" />
+      </ion-input>
+      <br />
+    </ion-card>
     
-    <ion-list radio-group ngControl="cat">
-      <ion-list-header>
-        Category
-      </ion-list-header>
-      <ion-radio checked="true" value="interested" [(ng-model)]="radio">
-        Interested
-      </ion-radio>
-      <ion-radio value="want" [(ng-model)]="radio">
-        Want
-      </ion-radio>
-      <ion-radio value="have" [(ng-model)]="radio">
-        Have
-      </ion-radio>
-    </ion-list>
+    <ion-card>
+      <ion-list radio-group ngControl="cat">
+        <ion-radio checked="true" value="have">
+          Have
+        </ion-radio>
+        <ion-radio value="want">
+          Want
+        </ion-radio>
+        <ion-radio value="interested">
+          Interested
+        </ion-radio>
+      </ion-list>
+    </ion-card>
   </form>
   
-  <br />
-  <button block (click)="processInput()">Add Ticker</button>
+  <div padding>
+    <button block (click)="processInput()">Add Ticker</button>
+  </div>
 </ion-content>

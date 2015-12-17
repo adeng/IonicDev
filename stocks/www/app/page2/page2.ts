@@ -1,4 +1,4 @@
-import {Page} from 'ionic-framework/ionic';
+import {Page, Storage, SqlStorage} from 'ionic-framework/ionic';
 import {Control, ControlGroup} from 'angular2/angular2';
 
 @Page({
@@ -12,10 +12,15 @@ export class Page2 {
     "cat": this.cat
   });
   
+  storage: Storage;
+  
   constructor() {
+    this.storage = new Storage(SqlStorage);
   }
   
   processInput() {
-    console.log(JSON.stringify(this.tickerForm.value));
+    this.storage.get(this.cat.value).then((value) => {
+      this.storage.set(this.cat.value, value + "," + this.ticker.value);
+    });
   }
 }
