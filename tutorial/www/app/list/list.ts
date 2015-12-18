@@ -27,8 +27,8 @@ export class ListPage {
 
     console.log('You selected:', item.title);
 
-     // this.nav.push(ItemDetailsPage, {
-     //   item: item
-     // });
+    //  this.nav.push(ItemDetailsPage, {
+    //    item: item
+    //  });
   }
 }

@@ -6,7 +6,7 @@
 </ion-navbar>
 
 <ion-content class="page3">
-  <ion-segment class="display">
+  <ion-segment [(ngModel)]="display" class="display">
     <ion-segment-button value="have" checked="true" (click)="fillList('have')">
       Have
     </ion-segment-button>
@@ -18,9 +18,13 @@
     </ion-segment-button>
   </ion-segment>
   
-  <ion-list>
-    <ion-item *ngFor="#ticker of tickers">
+  <ion-list [hidden]="numTicks == 0">
+    <button ion-item *ngFor="#ticker of tickers" (click)="openStockInfo($event, ticker)">
       {{ticker}}
-    </ion-item>
+    </button>
   </ion-list>
+  
+  <ion-list-header [hidden]="numTicks > 0">
+    You haven't added any tickers to this watchlist yet!
+  </ion-list-header>
 </ion-content>

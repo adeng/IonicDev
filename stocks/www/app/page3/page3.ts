@@ -1,12 +1,18 @@
-import {Page, Storage, SqlStorage} from 'ionic-framework/ionic';
-import {NgFor} from 'angular2/angular2';
+import {Page, Storage, SqlStorage, NavController} from 'ionic-framework/ionic';
+import {StockInfo} from '../stock-info/stock-info';
 
 @Page({
   templateUrl: 'app/page3/page3.html'
 })
 export class Page3 {
+  display: string = "have";
   tickers: Array<string>;
-  constructor() {
+  numTicks: number = 0;
+  nav: NavController;
+  storage: Storage;
+  
+  constructor(nav: NavController) {
+    this.nav = nav;
     this.storage = new Storage(SqlStorage, {name: 'stocks'});
     this.fillList('have');
   }
@@ -14,10 +20,17 @@ export class Page3 {
   fillList(display: string) {
     this.storage.get(display).then((values) => {
       if( values == null ) {
-        this.tickers = ["You haven't added any tickers yet!"];
+        this.tickers = new Array<string>();
       } else {
         this.tickers = values.split(",");  
       }
+      this.numTicks = this.tickers.length;
+    });
+  }
+  
+  openStockInfo(event, stock) {
+    this.nav.push(StockInfo, {
+      stock: stock
     });
   }
 }
