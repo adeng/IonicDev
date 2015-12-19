@@ -5,8 +5,15 @@ import {Pipe} from 'angular2/core';
 	pure: false
 })
 
-export class KeyPipe {
-	transform(value: Object, args: string[]):string {
-		return value[args[0]];
+export class AsyncKeyPipe {
+    private fetchedPromise: Promise<Object>;
+    private result: string;
+    
+	transform(value: Promise<Object>, args: string[]) {
+        if(!this.fetchedPromise) {
+            this.fetchedPromise = value
+                .then((obj) => this.result = obj[args[0]] );
+        }
+        return this.result;
 	}
 }

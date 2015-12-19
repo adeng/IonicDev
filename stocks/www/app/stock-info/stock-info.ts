@@ -1,11 +1,11 @@
 import {Page, NavParams} from 'ionic-framework/ionic';
 import {StockService} from '../libs/stocks/stock-service';
-import {KeyPipe} from '../libs/pipes/key-pipe';
+import {AsyncKeyPipe} from '../libs/pipes/key-pipe';
 import {Http} from 'angular2/http';
 
 @Page({
   templateUrl: 'app/stock-info/stock-info.html',
-  pipes: [KeyPipe]
+  pipes: [AsyncKeyPipe]
 })
 
 export class StockInfo {
