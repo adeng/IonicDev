@@ -1,5 +1,6 @@
 import {Page, Storage, SqlStorage, NavController} from 'ionic-framework/ionic';
 import {StockInfo} from '../stock-info/stock-info';
+import {AddTicker} from '../add-ticker/add-ticker';
 
 @Page({
   templateUrl: 'app/page3/page3.html'
@@ -32,5 +33,10 @@ export class Page3 {
     this.nav.push(StockInfo, {
       stock: stock
     });
+  }
+  
+  openTicker() {
+    console.log("Here");
+    this.nav.push(AddTicker);
   }
 }

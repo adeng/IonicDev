@@ -21,9 +21,12 @@
 // are different per mode.
 
 $colors: (
-  primary:    #4CAF50,
-  secondary:  #8BC34A,
-  danger:     #CDDC39,
-  light:      #4CAF50,
-  dark:       #222
+  primary:          #4CAF50,
+  dark-primary:     #388E3C, 
+  accent:           #8BC34A,
+  light-primary:    #C8E6C9,
+  dark:             #212121,
+  secondary:        #727272,
+  divider:          #B6B6B6,
+  danger:           #FF5722  
 );

@@ -2,6 +2,26 @@
   <ion-title>{{ticker}}</ion-title>
 </ion-navbar>
 
-<ion-content padding>
-	<h2>{{data | key: 'Symbol'}}</h2>
+<ion-content>
+	<h2 padding>{{data | key: 'Name'}}</h2>
+    <img padding [src]="url" />
+    
+    <ion-list>
+        <ion-item>
+            <h2>Last Price</h2>
+            <ion-badge accent item-right>${{data | key: "LastPrice"}}</ion-badge>
+        </ion-item>
+        <ion-item>
+            <h2>Last Trade</h2>
+            <ion-badge accent item-right>{{data | key: "LastPrice" | date: "mmss"}}</ion-badge>
+        </ion-item>
+        <ion-item>
+            <h2>Change</h2>
+            <ion-badge accent item-right>{{data | key: "Change"}}</ion-badge>
+        </ion-item>
+        <ion-item>
+            <h2>Market Cap</h2>
+            <ion-badge accent item-right>{{data | key: "MarketCap" | accounting}}</ion-badge>
+        </ion-item>
+    </ion-list>
 </ion-content>
