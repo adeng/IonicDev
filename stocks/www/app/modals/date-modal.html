@@ -1,0 +1,40 @@
+<ion-toolbar primary>
+    <ion-buttons end>
+        <button (click)="closePage()">
+            <icon close></icon>
+        </button>
+    </ion-buttons>
+    
+    <ion-title>Date Range</ion-title>
+</ion-toolbar>
+
+<ion-content>
+    <form [ngFormModel]="dateForm">
+        <ion-list radio-group ngControl="date">
+            <ion-radio value="1d">
+                1 Day
+            </ion-radio>
+            <ion-radio value="5d">
+                5 Days
+            </ion-radio>
+            <ion-radio value="3m">
+                3 Months
+            </ion-radio>
+            <ion-radio value="6m">
+                6 Months
+            </ion-radio>
+            <ion-radio value="1y">
+                1 Year
+            </ion-radio>
+            <ion-radio value="2y">
+                2 Years
+            </ion-radio>
+            <ion-radio value="5y">
+                5 Years
+            </ion-radio>
+            <ion-radio value="my">
+                Maximum
+            </ion-radio>
+        </ion-list>
+    </form>
+</ion-content>

@@ -1,0 +1,25 @@
+<ion-toolbar primary>
+    <ion-buttons end>
+        <button (click)="closePage()">
+            <icon close></icon>
+        </button>
+    </ion-buttons>
+    
+    <ion-title>Type Range</ion-title>
+</ion-toolbar>
+
+<ion-content>
+    <form [ngFormModel]="typeForm">
+        <ion-list radio-group ngControl="type">
+            <ion-radio value="l">
+                Line Chart
+            </ion-radio>
+            <ion-radio value="b">
+                Bar Chart
+            </ion-radio>
+            <ion-radio value="c">
+                Candlestick Chart
+            </ion-radio>
+        </ion-list>
+    </form>
+</ion-content>
