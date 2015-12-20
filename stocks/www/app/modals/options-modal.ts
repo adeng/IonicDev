@@ -3,6 +3,7 @@ import {DateRangeModal} from '../modals/date-modal';
 import {TypeModal} from '../modals/type-modal';
 import {MovingAvgModal} from '../modals/ma-modal';
 import {ExpAvgModal} from '../modals/ema-modal';
+import {TechIndicatorsModal} from '../modals/ta-modal';
 import {DateModalPipe, TypeModalPipe} from '../libs/pipes/chart-pipe';
 
 @Page({
@@ -53,6 +54,14 @@ export class OptionsModal {
         this.modal.open(ExpAvgModal, {ema: this.options[3]}).then( modalRef => {
             modalRef.onClose = data => {
                 this.options[3] = data;
+            }
+        });
+    }
+    
+    openTAModal() {
+        this.modal.open(TechIndicatorsModal, {ta: this.options[4]}).then( modalRef => {
+            modalRef.onClose = data => {
+                this.options[4] = data;
             }
         });
     }

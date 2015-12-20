@@ -1,0 +1,25 @@
+<ion-toolbar primary>
+    <ion-buttons end>
+        <button (click)="closePage()">
+            <icon close></icon>
+        </button>
+    </ion-buttons>
+    
+    <ion-title>Technical Indicators</ion-title>
+</ion-toolbar>
+
+<ion-content>
+    <form [ngFormModel]="taForm">
+        <ion-list>
+            <ion-checkbox ngControl="bb">
+                Bollinger Bands
+            </ion-checkbox>
+            <ion-checkbox ngControl="ps">
+                Parabolic SAR
+            </ion-checkbox>
+            <ion-checkbox ngControl="v">
+                Volume
+            </ion-checkbox>
+        </ion-list>
+    </form>
+</ion-content>
