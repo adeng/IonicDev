@@ -13,13 +13,13 @@
         <button ion-item (click)="openDateModal()">
             Date Range
             <ion-note item-right>
-                {{options[0]}}
+                {{options[0] | chartDate}}
             </ion-note>
         </button>
         <button ion-item (click)="openTypeModal()">
             Type
             <ion-note item-right>
-                {{options[1]}}
+                {{options[1] | chartType}}
             </ion-note>
         </button>
     </ion-list>

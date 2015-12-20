@@ -1,9 +1,11 @@
 import {Modal, Page, NavParams} from 'ionic-framework/ionic';
 import {DateRangeModal} from '../modals/date-modal';
 import {TypeModal} from '../modals/type-modal';
+import {DateModalPipe, TypeModalPipe} from '../libs/pipes/chart-pipe';
 
 @Page({
-    templateUrl: 'app/modals/options-modal.html'
+    templateUrl: 'app/modals/options-modal.html',
+    pipes: [DateModalPipe, TypeModalPipe]
 })
 
 export class OptionsModal {
