@@ -1,0 +1,34 @@
+<ion-toolbar primary>
+    <ion-buttons end>
+        <button (click)="closePage()">
+            <icon close></icon>
+        </button>
+    </ion-buttons>
+    
+    <ion-title>Exp Moving Averages</ion-title>
+</ion-toolbar>
+
+<ion-content>
+    <form [ngFormModel]="emaForm">
+        <ion-list>
+            <ion-checkbox value="e5" ngControl="em1">
+                5-Min Exp Moving Avg
+            </ion-checkbox>
+            <ion-checkbox value="e10" ngControl="em2">
+                10-Min Exp Moving Avg
+            </ion-checkbox>
+            <ion-checkbox value="e20" ngControl="em3">
+                20-Min Exp Moving Avg
+            </ion-checkbox>
+            <ion-checkbox value="e50" ngControl="em4">
+                50-Min Exp Moving Avg
+            </ion-checkbox>
+            <ion-checkbox value="e100" ngControl="em5">
+                100-Min Exp Moving Avg
+            </ion-checkbox>
+            <ion-checkbox value="e200" ngControl="em6">
+                200-Min Exp Moving Avg
+            </ion-checkbox>
+        </ion-list>
+    </form>
+</ion-content>

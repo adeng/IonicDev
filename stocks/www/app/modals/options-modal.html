@@ -22,5 +22,17 @@
                 {{options[1] | chartType}}
             </ion-note>
         </button>
+        <button ion-item (click)="openMAModal()">
+            Moving Average
+            <ion-note item-right>
+                {{options[2]}}
+            </ion-note>
+        </button>
+        <button ion-item (click)="openEMAModal()">
+            Exponential Moving Average
+            <ion-note item-right>
+                {{options[3]}}
+            </ion-note>
+        </button>
     </ion-list>
 </ion-content>

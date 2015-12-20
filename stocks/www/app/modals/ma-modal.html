@@ -1,0 +1,34 @@
+<ion-toolbar primary>
+    <ion-buttons end>
+        <button (click)="closePage()">
+            <icon close></icon>
+        </button>
+    </ion-buttons>
+    
+    <ion-title>Moving Averages</ion-title>
+</ion-toolbar>
+
+<ion-content>
+    <form [ngFormModel]="maForm">
+        <ion-list>
+            <ion-checkbox value="m5" ngControl="m1">
+                5-Min Moving Avg
+            </ion-checkbox>
+            <ion-checkbox value="m10" ngControl="m2">
+                10-Min Moving Avg
+            </ion-checkbox>
+            <ion-checkbox value="m20" ngControl="m3">
+                20-Min Moving Avg
+            </ion-checkbox>
+            <ion-checkbox value="m50" ngControl="m4">
+                50-Min Moving Avg
+            </ion-checkbox>
+            <ion-checkbox value="m100" ngControl="m5">
+                100-Min Moving Avg
+            </ion-checkbox>
+            <ion-checkbox value="m200" ngControl="m6">
+                200-Min Moving Avg
+            </ion-checkbox>
+        </ion-list>
+    </form>
+</ion-content>

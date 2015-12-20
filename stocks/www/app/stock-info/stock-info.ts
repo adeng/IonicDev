@@ -29,7 +29,7 @@ export class StockInfo {
      * 4: Technical Indicators 1
      * 5: Technical Indicators 2
      */
-    chartParams: Array<any> = ["5d", "l"];
+    chartParams: Array<any> = ["5d", "l", [], [], []];
   
     constructor(navParams: NavParams, http: Http, modal: Modal) {
         this.ticker = navParams.get('stock');
@@ -53,5 +53,15 @@ export class StockInfo {
     genChart() {
         this.url = "http://chart.finance.yahoo.com/z?s=" + this.ticker + "&z=s&t=" 
             + this.chartParams[0] + "&q=" + this.chartParams[1];
+        
+        if( this.chartParams[2].length > 0 || this.chartParams[3].length > 0 || this.chartParams[4].length > 0) {
+            this.url += "&p=";
+            let a = this.chartParams[2].concat(this.chartParams[3], this.chartParams[4]);
+            
+            for( let i = 0; i < a.length; i++ ) {
+                this.url += a[i];
+                this.url += (i == a.length - 1) ? "" : ",";
+            }
+        }
     }
 }
