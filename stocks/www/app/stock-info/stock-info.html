@@ -16,26 +16,26 @@
         </ion-list-header>
         <ion-item>
             <h2>Last Price</h2>
-            <ion-badge light-primary item-right>${{data | key: "LastPrice"}}</ion-badge>
+            <ion-badge accent item-right>${{data | key: "LastPrice"}}</ion-badge>
         </ion-item>
         <ion-item>
             <h2>Last Trade</h2>
-            <ion-badge light-primary item-right>{{data | key: "Timestamp" | timestamp | date: "short"}}</ion-badge>
+            <ion-badge accent item-right>{{data | key: "Timestamp" | timestamp | date: "short"}}</ion-badge>
         </ion-item>
         <ion-item>
             <h2>Change</h2>
-            <ion-badge light-primary item-right>{{data | key: "Change"}}</ion-badge>
+            <ion-badge accent item-right>{{data | key: "Change"}}</ion-badge>
         </ion-item>
         <ion-list-header>
             Stock Info
         </ion-list-header>
         <ion-item>
             <h2>Market Cap</h2>
-            <ion-badge light-primary item-right>{{data | key: "MarketCap" | accounting}}</ion-badge>
+            <ion-badge accent item-right>{{data | key: "MarketCap" | accounting}}</ion-badge>
         </ion-item>
         <ion-item>
             <h2>Volume</h2>
-            <ion-badge light-primary item-right>{{data | key: "Volume" | accounting}}</ion-badge>
+            <ion-badge accent item-right>{{data | key: "Volume" | accounting}}</ion-badge>
         </ion-item>
     </ion-list>
 </ion-content>
