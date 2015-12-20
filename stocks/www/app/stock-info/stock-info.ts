@@ -1,9 +1,11 @@
-import {Page, NavParams, Modal} from 'ionic-framework/ionic';
+import {Page, NavParams, Modal, NavController} from 'ionic-framework/ionic';
 import {StockService} from '../libs/stocks/stock-service';
 import {AsyncKeyPipe} from '../libs/pipes/key-pipe';
 import {AccountingPipe, TimestampPipe} from '../libs/pipes/formatting';
 import {Http} from 'angular2/http';
 import {OptionsModal} from '../modals/options-modal';
+// import {TechAnalysis} from '../tech-analysis/tech-analysis';
+import {TechnicalAnalysis} from '../technical-analysis/technical-analysis';
 
 enum Type {"ty=c&ta=0", "ty=l&ta=0", "ty=c&ta=1"};
 
@@ -17,6 +19,7 @@ export class StockInfo {
     stock: StockService;
     ticker: string;
     modal: Modal;
+    nav: NavController;
     promise: Promise<string>;
     url: string;
     type: string = Type[0];
@@ -31,7 +34,8 @@ export class StockInfo {
      */
     chartParams: Array<any> = ["5d", "l", [], [], []];
   
-    constructor(navParams: NavParams, http: Http, modal: Modal) {
+    constructor(navParams: NavParams, http: Http, modal: Modal, nav: NavController) {
+        this.nav = nav;
         this.ticker = navParams.get('stock');
         this.stock = new StockService();
         this.data = this.stock.getStockData(this.ticker, http);
@@ -47,6 +51,13 @@ export class StockInfo {
                 this.chartParams = data;
                 this.genChart();
             }
+        });
+    }
+    
+    openTechAnalysis() {
+        this.nav.push(TechnicalAnalysis, {
+            "ticker": this.ticker,
+            "stock-service": this.stock
         });
     }
 

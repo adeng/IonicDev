@@ -37,5 +37,8 @@
             <h2>Volume</h2>
             <ion-badge accent item-right>{{data | key: "Volume" | accounting}}</ion-badge>
         </ion-item>
+        <button ion-item (click)="openTechAnalysis()">
+            <h2>More Technical Analysis</h2>
+        </button>
     </ion-list>
 </ion-content>
