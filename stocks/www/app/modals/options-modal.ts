@@ -12,17 +12,17 @@ import {DateModalPipe, TypeModalPipe} from '../libs/pipes/chart-pipe';
 })
 
 export class OptionsModal {
-  options: Array<any>;
-  modal: Modal;
-  
-  constructor(nav: NavParams, modal: Modal) {
-      this.options = nav.get('options');
-      this.modal = modal;
-  }
-  
-  closePage() {
-      this.close(this.options);
-  }
+    options: Array<any>;
+    modal: Modal;
+
+    constructor(nav: NavParams, modal: Modal) {
+        this.options = nav.get('options');
+        this.modal = modal;
+    }
+
+    closePage() {
+        this.close(this.options);
+    }
   
     openDateModal() {
         this.modal.open(DateRangeModal, {date: this.options[0]}).then( modalRef => {
