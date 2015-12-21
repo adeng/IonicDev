@@ -30,7 +30,7 @@ export class News {
     }
     
     openFilter() {
-        let obj = new Object();
+        let obj: Object;
         switch(this.display) {
             case "markets":
                 obj = {tags: this.markets};
@@ -42,9 +42,10 @@ export class News {
                 obj = {tags: this.tickers};
                 break;
         }
+        console.log(obj);
         this.modal.open(FilterModal, obj).then( modalRef => {
             modalRef.onClose = data => {
-                this.refresh(this.display);
+                this.refresh();
             }
         });
     }

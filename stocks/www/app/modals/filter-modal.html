@@ -10,8 +10,8 @@
 
 <ion-content>
     <ion-list>
-        <ion-toggle *ngFor="#tick of tickers" [(ngModel)]="tick.isChecked" [(checked)]="tick.isChecked">
-            {{tick.name}}
+        <ion-toggle *ngFor="#tag of tags" [(ngModel)]="tag.isChecked" [(checked)]="tag.isChecked">
+            {{tag.name}}
         </ion-toggle>
     </ion-list>
 </ion-content>
