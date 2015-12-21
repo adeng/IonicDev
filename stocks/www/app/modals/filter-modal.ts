@@ -5,12 +5,12 @@ import {Modal, Page, NavParams} from 'ionic-framework/ionic';
 })
 
 export class FilterModal {
-    tickers: Array<string> = new Array();
+    tags: Array<Object> = new Array();
     constructor(nav: NavParams) {
-        this.tickers = nav.get('tickers');
+        this.tags = nav.get('tickers');
     }
 
     closePage() {
-        this.close(this.tickers);
+        this.close(this.tags);
     }
 }

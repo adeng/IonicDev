@@ -32,7 +32,7 @@ export class StockInfo {
      * 4: Technical Indicators 1
      * 5: Technical Indicators 2
      */
-    chartParams: Array<any> = ["5d", "l", [], [], []];
+    chartParams: Array<any> = ["1d", "l", [], [], []];
   
     constructor(navParams: NavParams, http: Http, modal: Modal, nav: NavController) {
         this.nav = nav;
