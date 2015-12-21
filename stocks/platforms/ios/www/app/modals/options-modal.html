@@ -1,0 +1,44 @@
+<ion-toolbar primary>
+    <ion-buttons end>
+        <button (click)="closePage()">
+            <icon close></icon>
+        </button>
+    </ion-buttons>
+    
+    <ion-title>Chart Options</ion-title>
+</ion-toolbar>
+
+<ion-content>
+    <ion-list>
+        <button ion-item (click)="openDateModal()">
+            Date Range
+            <ion-note item-right>
+                {{options[0] | chartDate}}
+            </ion-note>
+        </button>
+        <button ion-item (click)="openTypeModal()">
+            Type
+            <ion-note item-right>
+                {{options[1] | chartType}}
+            </ion-note>
+        </button>
+        <button ion-item (click)="openMAModal()">
+            Moving Average
+            <ion-note item-right>
+                {{options[2]}}
+            </ion-note>
+        </button>
+        <button ion-item (click)="openEMAModal()">
+            Exponential Moving Average
+            <ion-note item-right>
+                {{options[3]}}
+            </ion-note>
+        </button>
+        <button ion-item (click)="openTAModal()">
+            Technical Indicators
+            <ion-note item-right>
+                {{options[4]}}
+            </ion-note>
+        </button>
+    </ion-list>
+</ion-content>

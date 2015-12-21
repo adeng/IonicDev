@@ -1,0 +1,58 @@
+
+<ion-navbar primary *navbar>
+    <ion-title>
+        News
+    </ion-title>
+    
+    <ion-buttons end>
+        <button (click)="openFilter()">
+            <icon funnel></icon>
+        </button>
+        <button (click)="refresh()">
+            <icon refresh></icon>
+        </button>
+    </ion-buttons>
+</ion-navbar>
+
+<ion-content class="news">
+    <div padding hideWhen="android">
+        <ion-segment [(ngModel)]="display" class="display">
+            <ion-segment-button value="markets" checked="true" (click)="refresh('markets')">
+                Markets
+            </ion-segment-button>
+            <ion-segment-button value="sectors" (click)="refresh('sectors')">
+                Sectors
+            </ion-segment-button>
+            <ion-segment-button value="watchlist" (click)="refresh('watchlist')">
+                Watchlist
+            </ion-segment-button>
+        </ion-segment>
+    </div>
+    <ion-segment hideWhen="ios" [(ngModel)]="display" class="display">
+        <ion-segment-button value="markets" checked="true" (click)="refresh('markets')">
+            Markets
+        </ion-segment-button>
+        <ion-segment-button value="sectors" (click)="refresh('sectors')">
+            Sectors
+        </ion-segment-button>
+        <ion-segment-button value="watchlist" (click)="refresh('watchlist')">
+            Watchlist
+        </ion-segment-button>
+    </ion-segment>
+    
+    <ion-list-header [hidden]="news.length != 0">
+        <p>Loading...</p>
+    </ion-list-header>
+    <ion-list-header [hidden]="failed != 3">
+        <p>Nothing in your watchlist!</p>
+    </ion-list-header>
+    <ion-list>
+        <button ion-item *ngFor="#new of news | tickerfilter: tickers" (click)="openStory(new.link)">
+            <h2 style="white-space:normal;">{{new.title}}</h2>
+            <br />
+            <ion-note>
+                <p>{{new.ticker}}</p>
+            </ion-note>
+        </button>
+    </ion-list>
+</ion-content>

@@ -1,0 +1,17 @@
+<ion-toolbar primary>
+    <ion-buttons end>
+        <button (click)="closePage()">
+            <icon close></icon>
+        </button>
+    </ion-buttons>
+    
+    <ion-title>Filter Tickers</ion-title>
+</ion-toolbar>
+
+<ion-content>
+    <ion-list>
+        <ion-toggle *ngFor="#tag of tags" [(ngModel)]="tag.isChecked" [(checked)]="tag.isChecked">
+            {{tag.name}}
+        </ion-toggle>
+    </ion-list>
+</ion-content>
