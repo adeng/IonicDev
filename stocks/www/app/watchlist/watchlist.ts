@@ -3,9 +3,9 @@ import {StockInfo} from '../stock-info/stock-info';
 import {AddTicker} from '../add-ticker/add-ticker';
 
 @Page({
-  templateUrl: 'app/page3/page3.html'
+  templateUrl: 'app/watchlist/watchlist.html'
 })
-export class Page3 {
+export class WatchList {
   display: string = "have";
   tickers: Array<string>;
   numTicks: number = 0;

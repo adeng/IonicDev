@@ -7,9 +7,24 @@
 <ion-content class="tech-analysis">
     <ion-list>
         <ion-item>
+            <img [src]="url" width="100%" />
+        </ion-item>
+        <ion-item>
             <h2>RSI</h2>
             <ion-note item-right>
-                <p>Hello</p>
+                <p>{{rsi | number: '1.2-2' | rsi}}</p>
+            </ion-note>
+        </ion-item>
+        <ion-item>
+            <h2>Stochastic Oscillator</h2>
+            <ion-note item-right>
+                <p>{{osc | number: '1.2-2' | osc}}</p>
+            </ion-note>
+        </ion-item>
+        <ion-item>
+            <h2>Chandelier Exit Price</h2>
+            <ion-note item-right>
+                <p>{{stop | number: '1.2-2'}}</p>
             </ion-note>
         </ion-item>
     </ion-list>

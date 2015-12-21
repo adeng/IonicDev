@@ -47,16 +47,16 @@ export class StockService {
             
             console.log(url);
             
-			// http.get( url ).subscribe(
-			// 	data => resolve(data.json()),
-			// 	err => {
-			// 		http.get('/app/libs/stocks/out.dat').subscribe(
-			// 			res => {
-			// 				resolve(res.json());
-			// 			}
-			// 		);
-			// 	}
-			// );
+			http.get( url ).subscribe(
+				data => resolve(data.json().Elements[0].DataSeries),
+				err => {
+					http.get('/app/libs/stocks/data.dat').subscribe(
+						res => {
+							resolve(res.json().Elements[0].DataSeries);
+						}
+					);
+				}
+			);
 		});
 		
 		return promise;
