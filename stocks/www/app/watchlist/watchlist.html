@@ -12,17 +12,30 @@
 </ion-navbar>
 
 <ion-content class="page3">
-  <ion-segment [(ngModel)]="display" class="display">
-    <ion-segment-button value="have" checked="true" (click)="fillList('have')">
-      Have
-    </ion-segment-button>
-    <ion-segment-button value="want" (click)="fillList('want')">
-      Want
-    </ion-segment-button>
-    <ion-segment-button value="interested" (click)="fillList('interested')">
-      Interested
-    </ion-segment-button>
-  </ion-segment>
+    <div padding hideWhen="android">
+        <ion-segment [(ngModel)]="display" class="display">
+            <ion-segment-button value="have" checked="true" (click)="fillList('have')">
+            Have
+            </ion-segment-button>
+            <ion-segment-button value="want" (click)="fillList('want')">
+            Want
+            </ion-segment-button>
+            <ion-segment-button value="interested" (click)="fillList('interested')">
+            Interested
+            </ion-segment-button>
+        </ion-segment>
+    </div>
+    <ion-segment hideWhen="ios" [(ngModel)]="display" class="display">
+        <ion-segment-button value="have" checked="true" (click)="fillList('have')">
+            Have
+        </ion-segment-button>
+        <ion-segment-button value="want" (click)="fillList('want')">
+            Want
+        </ion-segment-button>
+        <ion-segment-button value="interested" (click)="fillList('interested')">
+            Interested
+        </ion-segment-button>
+    </ion-segment>
   
   <ion-list [hidden]="numTicks == 0">
     <button ion-item *ngFor="#ticker of tickers" (click)="openStockInfo($event, ticker)">
@@ -30,7 +43,7 @@
     </button>
   </ion-list>
   
-  <ion-list-header [hidden]="numTicks > 0">
-    You haven't added any tickers to this watchlist yet!
-  </ion-list-header>
+  <ion-item [hidden]="numTicks > 0">
+    <p style="white-space:normal;">You haven't added any tickers to this watchlist yet!</p>
+  </ion-item>
 </ion-content>

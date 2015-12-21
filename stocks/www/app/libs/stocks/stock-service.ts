@@ -11,7 +11,7 @@ export class StockService {
 			http.get('http://dev.markitondemand.com/MODApis/Api/v2/Quote/json?symbol=' + ticker ).subscribe(
 				data => resolve(data.json()),
 				err => {
-					http.get('/app/libs/stocks/out.dat').subscribe(
+					http.get('/app/libs/data/out.dat').subscribe(
 						res => {
 							resolve(res.json());
 						}
@@ -50,7 +50,7 @@ export class StockService {
 			http.get( url ).subscribe(
 				data => resolve(data.json().Elements[0].DataSeries),
 				err => {
-					http.get('/app/libs/stocks/data.dat').subscribe(
+					http.get('/app/libs/data/data.dat').subscribe(
 						res => {
 							resolve(res.json().Elements[0].DataSeries);
 						}

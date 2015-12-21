@@ -40,9 +40,6 @@ export class TechnicalAnalysis {
             if(h[i] > high)
                 high = h[i];
         }
-        console.log(h[h.length - 1] - lows[lows.length - 1], 
-            Math.abs(h[h.length - 1] - closes[closes.length - 1]), 
-            Math.abs(lows[lows.length - 1] - closes[closes.length - 1]));
         
         let atr = Math.max(h[h.length - 1] - lows[lows.length - 1], 
             Math.abs(h[h.length - 1] - closes[closes.length - 1]), 
