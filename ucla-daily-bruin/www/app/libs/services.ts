@@ -13,7 +13,7 @@ export class XMLParser {
     
     getRSS(http: Http, src: string, category: string) {
         let a = this;
-        var parser = new Promise<any>(function(resolve) {
+        return new Promise<any>(function(resolve) {
             http.get(src).subscribe(
                 data => {
                     let arr = a.processRSS(data.text(), category);
@@ -29,7 +29,6 @@ export class XMLParser {
 				}
             );
         });
-        return parser;
     }
     
     parseRSS(xml: string, tag: string) {
