@@ -1,6 +1,7 @@
 import {App, IonicApp, Platform} from 'ionic-framework/ionic';
 import {Home} from './home/home';
 import {Headlines} from './headlines/headlines';
+import {PostList} from './postlist/postlist';
 import {Page3} from './page3/page3';
 
 
@@ -16,7 +17,7 @@ export class MyApp {
         this.pages = [
             { title: 'Home', component: Home, icon: "home" },
             { title: 'Headlines', component: Headlines, icon: "document" },
-            { title: 'Articles', component: Headlines, icon: "document"}
+            { title: 'Post List', component: PostList, icon: "list"}
         ];
 
         // this tells the tabs component which Pages

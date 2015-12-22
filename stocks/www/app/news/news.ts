@@ -3,6 +3,7 @@ import {Http} from 'angular2/http';
 import {XMLParser} from '../libs/services/xmlparser';
 import {TickerFilterPipe} from '../libs/pipes/filters';
 import {FilterModal} from '../modals/filter-modal';
+import {NewsModal} from '../modals/news-modal';
 
 @Page({
     templateUrl: 'app/news/news.html',
@@ -16,6 +17,7 @@ export class News {
     tickers: Array<Object> = new Array();
     markets: Array<Object> = [{name: "Deals", isChecked: true, urls: ["http://feeds.reuters.com/news/deals"]}, {name: "Economy", isChecked: true, urls: ["http://feeds.reuters.com/news/economy"]}, {name: "Global Markets", isChecked: true, urls: ["http://feeds.reuters.com/reuters/globalmarketsNews"]}, {name: "IPOs", isChecked: true, urls: ["http://www.reuters.com/rssFeed/newIssuesNews"]}, {name: "Regulatory News", isChecked: true, urls: ["http://feeds.reuters.com/reuters/governmentfilingsNews"]}, {name: "US Markets", isChecked: true, urls: ["http://feeds.reuters.com/news/usmarkets"]}];
     sectors: Array<Object> = [{name: "Basic Materials", isChecked: true, urls: ["http://feeds.reuters.com/reuters/basicmaterialsNews"]}, {name: "Cyclical Consumer Goods", isChecked: true, urls: ["http://feeds.reuters.com/reuters/cyclicalconsumergoodsNews"]}, {name: "Energy", isChecked: true, urls: ["http://feeds.reuters.com/reuters/USenergyNews"]}, {name: "Environment", isChecked: true, urls: ["http://feeds.reuters.com/reuters/environment"]}, {name: "Financials", isChecked: true, urls: ["http://feeds.reuters.com/reuters/financialsNews"]}, {name: "Healthcare", isChecked: true, urls: ["http://feeds.reuters.com/reuters/UShealthcareNews"]}, {name: "Industrials", isChecked: true, urls: ["http://feeds.reuters.com/reuters/industrialsNews"]}, {name: "Media Diversified", isChecked: true, urls: ["http://feeds.reuters.com/reuters/USmediaDiversifiedNews"]}, {name: "Non-Cyclical Consumer Goods", isChecked: true, urls: ["http://feeds.reuters.com/reuters/noncyclicalconsumergoodsNews"]}, {name: "Technology", isChecked: true, urls: ["http://feeds.reuters.com/reuters/technologysectorNews"]}, {name: "Utilities", isChecked: true, urls: ["http://feeds.reuters.com/reuters/utilitiesNews"]}];
+    analysis: Array<Object> = [{name: "Long Ideas", isChecked: true, urls: ["http://seekingalpha.com/tag/long-ideas.xml"]}, {name: "Short Ideas", isChecked: true, urls: ["http://seekingalpha.com/tag/short-ideas.xml"]}, {name: "Briefing", isChecked: true, urls: ["http://seekingalpha.com/tag/cramers-picks.xml", "http://seekingalpha.com/tag/wall-st-breakfast.xml", "http://blog.estimize.com/rss"]}];
     http: Http;
     modal: Modal;
     display: string;
@@ -25,13 +27,16 @@ export class News {
         this.parse = new XMLParser();
         this.http = http;
         this.modal = modal;
-        this.display = "markets";
+        this.display = "analysis";
         this.refresh();
     }
     
     openFilter() {
         let obj: Object;
         switch(this.display) {
+            case "analysis":
+                obj = {tags: this.analysis};
+                break;
             case "markets":
                 obj = {tags: this.markets};
                 break;
@@ -55,7 +60,7 @@ export class News {
             return;
             
         if(section == "undefined")
-            section = this.display
+            section = this.display;
           
         this.news = new Array();
         this.failed = 0;
@@ -66,6 +71,7 @@ export class News {
                 this.getTickers('want', this.http);
                 this.getTickers('interested', this.http);
                 break;
+            case "analysis":
             case "sectors":
             case "markets":
                 this.fillList(this.http, section);
@@ -104,6 +110,9 @@ export class News {
             case "watchlist":
                 list = this.tickers;
                 break;
+            case "analysis":
+                list = this.analysis;
+                break;
         }
         
         for(let i = 0; i < list.length; i++) {
@@ -121,7 +130,7 @@ export class News {
         }
     }
     
-    openStory(url: string) {
-        console.log(url);
+    openStory(url: string, title: string) {
+        this.modal.open(NewsModal, {'url': url, 'title': title});
     }
 }
