@@ -15,7 +15,8 @@ export class MyApp {
         // // set our app's pages
         this.pages = [
             { title: 'Home', component: Home, icon: "home" },
-            { title: 'Headlines', component: Headlines, icon: "document" }
+            { title: 'Headlines', component: Headlines, icon: "document" },
+            { title: 'Articles', component: Headlines, icon: "document"}
         ];
 
         // this tells the tabs component which Pages
