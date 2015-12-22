@@ -5,8 +5,9 @@ import {Modal, Page, NavParams} from 'ionic-framework/ionic';
 })
 
 export class NewsModal {  
-  constructor(nav: NavParams) {
-      this.url = nav.get('url');
-      this.title = nav.get('title')
-  }
+    loaded: boolean = false;
+    constructor(nav: NavParams) {
+        this.url = nav.get('url');
+        this.title = nav.get('title');
+    }
 }

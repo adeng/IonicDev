@@ -11,7 +11,7 @@
 <ion-content>
     <ion-list>
         <ion-toggle *ngFor="#tag of tags" [(ngModel)]="tag.isChecked" [(checked)]="tag.isChecked">
-            {{tag.name}}
+            {{tag.name | uppercase}}
         </ion-toggle>
     </ion-list>
 </ion-content>

@@ -9,6 +9,9 @@
 </ion-toolbar>
 
 <ion-content>
-    <iframe [src]="url" style="height: 100%; width: 100%" frameborder="0">
+    <ion-item [hidden]="loaded">
+        <p>Loading...</p>
+    </ion-item>
+    <iframe [src]="url" style="height: 100%; width: 100%" onload="loaded = true" frameborder="0">
     </iframe>
 </ion-content>
