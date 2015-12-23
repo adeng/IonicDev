@@ -1,11 +1,19 @@
 <ion-navbar primary *navbar>
     <ion-title>
-        Hello World
+        {{title}}
     </ion-title>
+    <ion-buttons end>
+        <button (click)="favorite()">
+            <icon star></icon>
+        </button>
+        <button (click)="share()">
+            <icon share></icon>
+        </button>
+    </ion-buttons>
 </ion-navbar>
 
 <ion-content class="postdetail">
-    <ion-slides loop="false" autoplay="false" index="start" (change)="updateSlide($event)">
+    <ion-slides loop="false" autoplay="false" index="start" (slideChanged)="updateSlide($event)">
         <ion-slide *ngFor="#post of posts" class="post">
             <scroll-content>
                 <div class="post-image">

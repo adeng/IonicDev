@@ -1,0 +1,24 @@
+<ion-navbar primary *navbar>
+    <button menuToggle>
+        <icon menu></icon>
+    </button>
+    <ion-title>
+        Favorites
+    </ion-title>
+</ion-navbar>
+
+<ion-content class="favorites">
+    <ion-item [hidden]="favorites.length > 0">
+        <p>You have no favorites!</p>
+    </ion-item>
+    <ion-list>
+        <button ion-item *ngFor="#obj of favorites, #j=index" class="post-item">
+            <ion-thumbnail item-right [hidden]="obj.media.images.length > 0">
+                <img [src]="obj.media.images[0]" />
+            </ion-thumbnail>
+            <h2>{{obj.title}}</h2>
+            <br />
+            <p>{{obj.date | date: 'short'}}</p>
+        </button>
+    </ion-list>
+</ion-content>
