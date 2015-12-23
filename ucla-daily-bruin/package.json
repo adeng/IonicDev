@@ -19,5 +19,16 @@
     "typescript": "^1.7.3"
   },
   "name": "ucla-daily-bruin",
-  "description": "ucla-daily-bruin: An Ionic project"
+  "description": "ucla-daily-bruin: An Ionic project",
+  "cordovaPlugins": [
+    "cordova-plugin-device",
+    "cordova-plugin-console",
+    "cordova-plugin-whitelist",
+    "cordova-plugin-splashscreen",
+    "cordova-plugin-statusbar",
+    "ionic-plugin-keyboard"
+  ],
+  "cordovaPlatforms": [
+    "android"
+  ]
 }

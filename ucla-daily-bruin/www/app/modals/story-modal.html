@@ -1,0 +1,23 @@
+<ion-toolbar primary>
+    <ion-buttons end>
+        <button (click)="close()">
+            <icon close></icon>
+        </button>
+    </ion-buttons>
+    
+    <ion-title>{{story.title}}</ion-title>
+</ion-toolbar>
+
+<ion-content class="postdetail">
+    <div class="post-image">
+        <img [src]="story.media.images[0]" [hidden]="story.media.images.length == 0" />
+    </div>
+    <ion-item class="post-title">
+        <h2>{{story.title}}</h2>
+        <br />
+        <p>{{story.date | date: "large"}}</p>
+        <p>{{story.author}}</p>
+    </ion-item>
+    <div [innerHTML]="story.htmlcontent" class="post-content">
+    </div>
+</ion-content>

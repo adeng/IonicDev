@@ -1,5 +1,5 @@
-import {Page, Storage, SqlStorage} from 'ionic-framework/ionic';
-
+import {Page, Storage, SqlStorage, Modal} from 'ionic-framework/ionic';
+import {StoryModal} from '../modals/modals';
 
 @Page({
     templateUrl: 'app/favorites/favorites.html'
@@ -7,7 +7,10 @@ import {Page, Storage, SqlStorage} from 'ionic-framework/ionic';
 export class Favorites {
     storage: Storage;
     favorites: Array<Object>;
-    constructor() {
+    modal: Modal;
+    
+    constructor(modal: Modal) {
+        this.modal = modal;
         this.storage = new Storage(SqlStorage, {name: 'favorites'});
         this.favorites = new Array<Object>();
         this.storage.get('favorites').then( data => {
@@ -19,5 +22,10 @@ export class Favorites {
     removeItem(index: number) {
         let a = this.favorites.splice(index, 1);
         this.storage.set('favorites', JSON.stringify(a));
+    }
+    
+    openPost(index: number) {
+        console.log(this.favorites[index]);
+        this.modal.open(StoryModal, {story: this.favorites[index]});
     }
 }

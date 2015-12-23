@@ -8,10 +8,18 @@ export class FilterModal {
     tags: Array<Object> = new Array();
     constructor(nav: NavParams) {
         this.tags = nav.get('tags');
-        console.log(this.tags);
     }
-
-    // closePage() {
-    //     this.close(this.tags);
-    // }
 }
+
+@Page({
+    templateUrl: 'app/modals/story-modal.html'
+})
+
+export class StoryModal {
+    story: Object;
+    constructor(nav: NavParams) {
+        this.story = nav.get('story');
+    }
+}
+
+
