@@ -13,7 +13,7 @@
 </ion-navbar>
 
 <ion-content class="postdetail">
-    <ion-slides loop="false" autoplay="false" index="start" (slideChanged)="updateSlide($event)">
+    <ion-slides loop="false" autoplay="false" index="index" (change)="updateSlide($event)">
         <ion-slide *ngFor="#post of posts" class="post">
             <scroll-content>
                 <div class="post-image">

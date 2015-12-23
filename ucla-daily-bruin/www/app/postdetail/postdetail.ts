@@ -18,7 +18,6 @@ export class PostDetail {
     }
     
     updateSlide(event) {
-        console.log(event);
         this.title = this.posts[event.activeIndex].title;
         this.index = event.activeIndex;
     }
