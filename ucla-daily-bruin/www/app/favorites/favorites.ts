@@ -15,4 +15,9 @@ export class Favorites {
                 this.favorites = JSON.parse(data);
         });
     }
+    
+    removeItem(index: number) {
+        let a = this.favorites.splice(index, 1);
+        this.storage.set('favorites', JSON.stringify(a));
+    }
 }

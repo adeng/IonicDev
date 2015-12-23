@@ -12,13 +12,21 @@
         <p>You have no favorites!</p>
     </ion-item>
     <ion-list>
-        <button ion-item *ngFor="#obj of favorites, #j=index" class="post-item">
-            <ion-thumbnail item-right [hidden]="obj.media.images.length > 0">
-                <img [src]="obj.media.images[0]" />
-            </ion-thumbnail>
-            <h2>{{obj.title}}</h2>
-            <br />
-            <p>{{obj.date | date: 'short'}}</p>
-        </button>
+        <ion-item-sliding *ngFor="#obj of favorites, #j=index">
+            <button ion-item class="post-item">
+                <ion-thumbnail item-right [hidden]="obj.media.images.length > 0">
+                    <img [src]="obj.media.images[0]" />
+                </ion-thumbnail>
+                <h2>{{obj.title}}</h2>
+                <br />
+                <p>{{obj.date | date: 'short'}}</p>
+            </button>
+            <ion-item-options>
+                <button danger (click)="removeItem(j)">
+                    <icon trash></icon> 
+                    <p>Delete</p>
+                </button>
+            </ion-item-options>
+        </ion-item-sliding>
     </ion-list>
 </ion-content>
