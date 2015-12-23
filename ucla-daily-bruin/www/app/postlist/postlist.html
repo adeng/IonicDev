@@ -6,20 +6,24 @@
 </ion-navbar>
 
 <ion-content class="postlist">
-    <ion-list>
-        <ion-list-header>
-            {{src.name}}
-        </ion-list-header>
-        <ion-item [hidden]="objs.length > 0">
-            <p>Loading...</p>
-        </ion-item>
-        <button ion-item *ngFor="#obj of objs" class="post-item">
-            <ion-thumbnail item-right [hidden]="obj.media.images.length > 0">
-                <img [src]="obj.media.images[0]" />
-            </ion-thumbnail>
-            <h2>{{obj.title}}</h2>
-            <br />
-            <p>{{obj.date | date: 'short'}}</p>
-        </button> 
-    </ion-list>
+    <ion-slides loop="true" autoplay="false">
+        <ion-slide *ngFor="#category of categories, #i=index">
+            <ion-list class="list">
+                <ion-list-header>
+                    {{category.name}}
+                </ion-list-header>
+                <ion-item [hidden]="objs[i].length > 0">
+                    <p>Loading...</p>
+                </ion-item> 
+                <button ion-item *ngFor="#obj of objs[i]" class="post-item">
+                    <ion-thumbnail item-right [hidden]="obj.media.images.length > 0">
+                        <img [src]="obj.media.images[0]" />
+                    </ion-thumbnail>
+                    <h2>{{obj.title}}</h2>
+                    <br />
+                    <p>{{obj.date | date: 'short'}}</p>
+                </button>
+            </ion-list>
+        </ion-slide>
+    </ion-slides>
 </ion-content>
