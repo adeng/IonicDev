@@ -41,7 +41,7 @@ export class XMLParser {
      * 
      * @author: Richard Sun
      */
-    processNode(html: string) {
+    processNodeMedia(html: string) {
         var doc = this.parser.parseFromString(html, 'text/html'); 
 		var images = this.getTags(doc, 'img'); 
  		var videos = this.getTags(doc, 'video').concat(this.getTags(doc, 'iframe')); 
@@ -57,30 +57,46 @@ export class XMLParser {
 
     }
     
+    processCData(str: string) {
+        if( str.indexOf('<![CDATA[') == 0 )
+            return str.substring(9, str.length - 3);
+        else
+            return str;
+    }
+    
     processRSS(xml: string, category: string) {
         let posts = this.parseRSS(xml, 'item');        
         let arr = new Array<Object>();
         
         for(let i = 0; i < posts.length; i++) {
             let obj = new Object();
+            let tags = new Array();
             for(let j = 0; j < posts[i].children.length; j++) {
                 let content = posts[i].children[j].innerHTML;
                 switch(posts[i].children[j].nodeName.toLowerCase()) {
                     case "title":
-                        obj['title'] = content;
+                        obj['title'] = this.processCData(content);
                         break;
                     case "link":
                         obj['link'] = content;
                         break;
+                    case "dc:creator":
+                        obj['author'] = this.processCData(content);
+                        break;
                     case "pubdate":
                         obj['date'] = Date.parse(content);
                         break;
+                    case "description":
                     case "content:encoded":
-                        obj['media'] = this.processNode(content.substring(9, content.length - 3));
-                        obj['htmlcontent'] = content.substring(9, content.length - 3);
+                        obj['media'] = this.processNodeMedia(content.substring(9, content.length - 3));
+                        obj['htmlcontent'] = this.processCData(content);
+                        break;
+                    case "category":
+                        tags.push(this.processCData(content));
                         break;
                 }
             }
+            obj['tags'] = tags;
             obj['category'] = category;
             arr.push(obj);
         }

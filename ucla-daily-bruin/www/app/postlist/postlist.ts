@@ -1,5 +1,6 @@
 import {Page} from 'ionic-framework/ionic';
 import {XMLParser} from '../libs/services';
+import {Http} from 'angular2/http';
 
 @Page({
     templateUrl: 'app/postlist/postlist.html',
@@ -16,6 +17,7 @@ export class PostList {
         this.objs = new Array<Object>();
         this.parser.getRSS(http, this.src.url, this.src.name).then( data => {
             this.objs = data;
+            console.log(data);
         });
     }
 }

@@ -10,8 +10,16 @@
         <ion-list-header>
             {{src.name}}
         </ion-list-header>
-        <button ion-item *ngFor="#obj in objs">
-            {{obj.title}}
-        </button>
+        <ion-item [hidden]="objs.length > 0">
+            <p>Loading...</p>
+        </ion-item>
+        <button ion-item *ngFor="#obj of objs" class="post-item">
+            <ion-thumbnail item-right [hidden]="obj.media.images.length > 0">
+                <img [src]="obj.media.images[0]" />
+            </ion-thumbnail>
+            <h2>{{obj.title}}</h2>
+            <br />
+            <p>{{obj.date | date: 'short'}}</p>
+        </button> 
     </ion-list>
 </ion-content>
