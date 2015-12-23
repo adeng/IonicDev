@@ -1,0 +1,17 @@
+<ion-toolbar primary>
+    <ion-buttons end>
+        <button (click)="close()">
+            <icon close></icon>
+        </button>
+    </ion-buttons>
+    
+    <ion-title>Filter</ion-title>
+</ion-toolbar>
+
+<ion-content>
+    <ion-list>
+        <ion-toggle *ngFor="#tag of tags" [(ngModel)]="tag.show" [(checked)]="tag.show">
+            {{tag.name}}
+        </ion-toggle>
+    </ion-list>
+</ion-content>

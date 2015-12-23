@@ -1,29 +1,36 @@
-<ion-navbar *navbar>
+<ion-navbar primary *navbar>
     <button menuToggle>
         <icon menu></icon>
     </button>
     <ion-title>Post List</ion-title>
+        <ion-buttons end>
+            <button (click)="openFilter()">
+                <icon funnel></icon>
+            </button>
+        </ion-buttons>
 </ion-navbar>
 
 <ion-content class="postlist">
     <ion-slides loop="true" autoplay="false">
-        <ion-slide *ngFor="#category of categories, #i=index">
-            <ion-list class="list">
-                <ion-list-header>
-                    {{category.name}}
-                </ion-list-header>
-                <ion-item [hidden]="objs[i].length > 0">
-                    <p>Loading...</p>
-                </ion-item> 
-                <button ion-item *ngFor="#obj of objs[i]" class="post-item">
-                    <ion-thumbnail item-right [hidden]="obj.media.images.length > 0">
-                        <img [src]="obj.media.images[0]" />
-                    </ion-thumbnail>
-                    <h2>{{obj.title}}</h2>
-                    <br />
-                    <p>{{obj.date | date: 'short'}}</p>
-                </button>
-            </ion-list>
+        <ion-slide *ngFor="#category of categories, #i=index" class="slide">
+            <scroll-content>
+                <ion-list class="list" *ngIf="category.show">
+                    <ion-list-header>
+                        {{category.name}}
+                    </ion-list-header>
+                    <ion-item [hidden]="objs[i].length > 0">
+                        <p>Loading...</p>
+                    </ion-item> 
+                    <button ion-item *ngFor="#obj of objs[i], #j=index" class="post-item" (click)="openPost(objs[i], j)">
+                        <ion-thumbnail item-right [hidden]="obj.media.images.length > 0">
+                            <img [src]="obj.media.images[0]" />
+                        </ion-thumbnail>
+                        <h2>{{obj.title}}</h2>
+                        <br />
+                        <p>{{obj.date | date: 'short'}}</p>
+                    </button>
+                </ion-list>
+            </scroll-content>
         </ion-slide>
     </ion-slides>
 </ion-content>

@@ -1,0 +1,25 @@
+<ion-navbar primary *navbar>
+    <ion-title>
+        Hello World
+    </ion-title>
+</ion-navbar>
+
+<ion-content class="postdetail">
+    <ion-slides loop="false" autoplay="false" index="start" (change)="updateSlide($event)">
+        <ion-slide *ngFor="#post of posts" class="post">
+            <scroll-content>
+                <div class="post-image">
+                    <img [src]="post.media.images[0]" [hidden]="post.media.images.length == 0" />
+                </div>
+                <ion-item class="post-title">
+                    <h2>{{post.title}}</h2>
+                    <br />
+                    <p>{{post.date | date: "large"}}</p>
+                    <p>{{post.author}}</p>
+                </ion-item>
+                <div [innerHTML]="post.htmlcontent" class="post-content">
+                </div>
+            </scroll-content>
+        </ion-slide>
+    </ion-slides>
+</ion-content>
