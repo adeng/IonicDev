@@ -44,7 +44,7 @@
             ]
         },
         {
-            "type": "fav",
+            "type": "favorites",
             "title": "Favorites",
             "icon": "star",
             "params": null

@@ -46,6 +46,7 @@ export class MyApp {
         // reset the nav to remove previous pages and only have this page
         // we wouldn't want the back button to show in this scenario
         let nav = this.app.getComponent('nav');
+        console.log(page.component);
         nav.setRoot(page.component, {params: page.params}).then(() => {
             // wait for the root page to be completely loaded
             // then close the menu
