@@ -25,6 +25,19 @@
                     <p>{{story.title}}</p>
                 </ion-card-content>
             </button>
+            <ion-item actions>
+                <button clear item-left (click)="favorite(i)">
+                    <icon star></icon>
+                    Favorite
+                </button>
+                <button clear item-left (click)="share()">
+                    <icon share></icon>
+                    Share
+                </button>
+                <p item-right>
+                    {{story.date | date: "shortDate"}}
+                </p>
+            </ion-item>
         </ion-card>
     </ion-list>
 </ion-content>
