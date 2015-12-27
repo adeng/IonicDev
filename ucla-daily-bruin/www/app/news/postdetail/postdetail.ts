@@ -2,7 +2,7 @@ import {Page, NavParams, Slides, Storage, SqlStorage, Popup} from 'ionic-framewo
 
 
 @Page({
-    templateUrl: 'app/postdetail/postdetail.html'
+    templateUrl: 'app/news/postdetail/postdetail.html'
 })
 export class PostDetail {
     posts: Array<Object>;

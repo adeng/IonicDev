@@ -2,7 +2,7 @@ import {Page, Storage, SqlStorage, Modal} from 'ionic-framework/ionic';
 import {StoryModal} from '../modals/modals';
 
 @Page({
-    templateUrl: 'app/favorites/favorites.html'
+    templateUrl: 'app/news/favorites/favorites.html'
 })
 export class Favorites {
     storage: Storage;

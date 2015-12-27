@@ -1,7 +1,7 @@
 import {Modal, Page, NavParams} from 'ionic-framework/ionic';
 
 @Page({
-    templateUrl: 'app/modals/filter-modal.html'
+    templateUrl: 'app/news/modals/filter-modal.html'
 })
 
 export class FilterModal {
@@ -12,7 +12,7 @@ export class FilterModal {
 }
 
 @Page({
-    templateUrl: 'app/modals/story-modal.html'
+    templateUrl: 'app/news/modals/story-modal.html'
 })
 
 export class StoryModal {

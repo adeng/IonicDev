@@ -1,8 +1,8 @@
 import {App, IonicApp, Platform} from 'ionic-framework/ionic';
+import {Http} from 'angular2/http';
 import {Home} from './home/home';
-import {Headlines} from './headlines/headlines';
-import {PostList} from './postlist/postlist';
-import {Favorites} from './favorites/favorites';
+import {PostList} from './news/postlist/postlist';
+import {Favorites} from './news/favorites/favorites';
 
 
 @App({
@@ -11,21 +11,33 @@ import {Favorites} from './favorites/favorites';
 export class MyApp {
     root;
     pages;
-    constructor(private app: IonicApp, private platform: Platform) {
+    constructor(private app: IonicApp, private platform: Platform, private http: Http) {
         this.app = app;
-        // // set our app's pages
-        this.pages = [
-            { title: 'Home', component: Home, icon: "home" },
-            { title: 'Headlines', component: PostList, icon: "document"},
-            { title: 'Favorites', component: Favorites, icon: "star"}
-        ];
-
-        // this tells the tabs component which Pages
-        // should be each tab's root Page
-        this.root = Home;
-
-        platform.ready().then(() => {
-            // Do any necessary cordova or native calls here now that the platform is ready
+        
+        // Use type as index and the actual channel component in the obj
+        let channelObj = {
+            "home": Home,
+            "postlist": PostList,
+            "favorites": Favorites
+        };
+        
+        http.get("/app/app.json").subscribe( res => {
+            let data = res.json();
+            let channels = data.channels;
+            for(let i = 0; i < channels.length; i++) {
+                channels[i].component = channelObj[channels[i].type];
+            }
+            
+            this.pages = channels;
+            
+            // this tells the tabs component which Pages
+            // should be each tab's root Page
+            this.root = this.pages[0].component;
+            
+            platform.ready().then(() => {
+                // Do any necessary cordova or native calls here now that the platform is ready
+                this.openPage(this.pages[0]);
+            });
         });
     }
     
@@ -34,7 +46,7 @@ export class MyApp {
         // reset the nav to remove previous pages and only have this page
         // we wouldn't want the back button to show in this scenario
         let nav = this.app.getComponent('nav');
-        nav.setRoot(page.component).then(() => {
+        nav.setRoot(page.component, {params: page.params}).then(() => {
             // wait for the root page to be completely loaded
             // then close the menu
             this.app.getComponent('leftMenu').close();
