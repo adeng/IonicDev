@@ -9,8 +9,10 @@
 
 @import "home/home";
 
-@import "postlist/postlist";
+@import "news/postlist/postlist";
 
-@import "postdetail/postdetail";
+@import "news/postdetail/postdetail";
 
-@import "favorites/favorites";
+@import "news/favorites/favorites";
+
+@import "news/stories/stories";

@@ -1,0 +1,30 @@
+<ion-navbar primary *navbar>
+    <button menuToggle>
+        <icon menu></icon>
+    </button>
+    <ion-title>
+        Stories
+    </ion-title>
+</ion-navbar>
+
+<ion-content class="stories">
+    <ion-item [hidden]="stories.length > 0">
+        <p>You have no favorites!</p>
+    </ion-item>
+    <ion-list>
+        <!--<button ion-item *ngFor="#story of stories">
+            {{story.author}}
+        </button>-->
+        <ion-card *ngFor="#story of stories, #i=index" class="post-item">
+            <img *ngIf="story.media.images.length > 0" [src]="story.media.images[0]" />
+            <button ion-item class="post-item-content" (click)="openPost(i)">
+                <ion-card-header>
+                    <h2>{{story.tags[0] | uppercase}}</h2>
+                </ion-card-header>
+                <ion-card-content>
+                    <p>{{story.title}}</p>
+                </ion-card-content>
+            </button>
+        </ion-card>
+    </ion-list>
+</ion-content>

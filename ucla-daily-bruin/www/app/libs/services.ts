@@ -1,4 +1,5 @@
 import {Http} from 'angular2/http';
+import {Storage, SqlStorage} from 'ionic-framework/ionic';
 
 export class XMLParser {
     parser;
@@ -102,5 +103,29 @@ export class XMLParser {
         }
         
         return arr;
+    }
+}
+
+export class Favorite {
+    storage: Storage;
+    constructor() {
+        this.storage = new Storage(SqlStorage, {name: "favorites"});
+    }
+    
+    addFavorite(popup, obj) {
+        popup.confirm({
+            title: "Favorite",
+            template: "Do you want to add this story to your favorites?",
+            cancelText: "Cancel",
+            okText: "OK"
+        }).then((result, ev) => {
+            this.storage.get('favorites').then( data => {
+                let a = (data == null) ? new Array() : JSON.parse(data);
+                a.push(obj);
+                this.storage.set('favorites', JSON.stringify(a));
+            });
+        }, () => {
+            console.log("Cancelled");
+        });
     }
 }

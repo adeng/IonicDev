@@ -1,0 +1,25 @@
+.stories {
+    .post-item {
+        h2 {
+            white-space: normal;
+        }
+        
+        button {
+            padding: 0px;
+        }
+    }
+    
+    .post-item-content {
+        ion-item-content {
+            margin: 0px;
+        }
+        
+        ion-card-header {
+            padding-bottom: 3px;
+        }
+        
+        p {
+            white-space: normal;
+        }
+    }
+}

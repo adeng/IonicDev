@@ -48,6 +48,15 @@
             "title": "Favorites",
             "icon": "star",
             "params": null
+        },
+        {
+            "type": "stories",
+            "title": "Stories",
+            "icon": "quote",
+            "params": {
+                "name": "News",
+                "url": "http://dailybruin.com/category/news/feed/"
+            }
         }
     ]
 }
