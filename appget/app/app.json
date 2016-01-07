@@ -1,0 +1,53 @@
+{
+    "channels": [
+        {
+            "type": "home",
+            "title": "Home",
+            "icon": "home",
+            "params": null
+        },
+        {
+            "type": "postlist",
+            "title": "Articles",
+            "icon": "document",
+            "params": [
+                {
+                    "name": "News", 
+                    "show": true, 
+                    "url": "http://dailybruin.com/category/news/feed/"
+                }, 
+                {
+                    "name": "Sports", 
+                    "show": true, 
+                    "url": "http://dailybruin.com/category/sports/feed/"
+                }, 
+                {
+                    "name": "A&E", 
+                    "show": true, 
+                    "url": "http://dailybruin.com/category/arts-entertainment/feed/"
+                }, 
+                {
+                    "name": "Opinion", 
+                    "show": true, 
+                    "url": "http://dailybruin.com/category/opinion/feed/"
+                }, 
+                {
+                    "name": "Radio", 
+                    "show": true, 
+                    "url": "http://dailybruin.com/category/radio/feed/"
+                }, 
+                {
+                    "name": "Video", 
+                    "show": true, 
+                    "url": "http://dailybruin.com/category/video/feed/"
+                }
+            ]
+        },
+        {
+            "type": "favorites",
+            "title": "Favorites",
+            "icon": "star",
+            "params": null
+        }
+    ]
+}

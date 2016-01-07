@@ -1,0 +1,23 @@
+.postdetail {        
+    .post-title {
+        h2 {
+            white-space: normal;
+        }
+    }
+    
+    .post-image {
+        background-color: black;
+    }
+    
+    .post-content {
+        img.wp-post-image {
+            display: none !important;
+        }
+        
+        p {
+            padding: 0px 20px 0px 20px;
+            font-size: 0.8em;
+            text-align: left;
+        }
+    }
+}

@@ -6,7 +6,7 @@ import {Favorites} from './news/favorites/favorites';
 
 
 @App({
-  templateUrl: 'app/app.html'
+  templateUrl: 'build/app.html'
 })
 export class MyApp {
     root;
@@ -21,7 +21,7 @@ export class MyApp {
             "favorites": Favorites
         };
         
-        http.get("/app/app.json").subscribe( res => {
+        http.get("/build/app.json").subscribe( res => {
             let data = res.json();
             let channels = data.channels;
             for(let i = 0; i < channels.length; i++) {
