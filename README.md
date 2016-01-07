@@ -7,7 +7,7 @@ Install Ionic 2 globally:
 npm install -g ionic@beta
 ```
 
-From a project's directory, run:
+`cd` to a project subdirectory and run:
 ```
 npm install
 ```

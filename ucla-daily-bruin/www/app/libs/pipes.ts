@@ -17,3 +17,12 @@ export class AsyncKeyPipe {
         return this.result;
 	}
 }
+
+@Pipe({
+    name: 'array'
+})
+export class ArrayPipe {
+    transform(value: Array<any>, args: string[]) {
+        return value.join(", ");
+    }
+}
