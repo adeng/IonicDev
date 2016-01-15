@@ -2,11 +2,10 @@ import {Page} from 'ionic-framework/ionic';
 
 
 @Page({
-  templateUrl: 'build/pages/page3/page3.html'
+  templateUrl: 'build/pages/page1/page1.html',
 })
-export class Page3 {
+export class Page1 {
   constructor() {
-      
+
   }
-  
 }

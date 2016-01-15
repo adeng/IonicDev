@@ -6,7 +6,6 @@ import {Page} from 'ionic-framework/ionic';
 })
 export class Page3 {
   constructor() {
-      
+
   }
-  
 }

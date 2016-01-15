@@ -5,7 +5,7 @@ import {Page2} from '../page2/page2';
   templateUrl: 'build/pages/page1/page1.html',
 })
 export class Page1 {
-  
+    
   displayer: Popup;
   nav: NavController;
   
@@ -25,6 +25,6 @@ export class Page1 {
   }
   
   openPage() {
-      this.nav.push(Page2);
+      this.nav.push(Page2, {key: "value"});
   }
 }
