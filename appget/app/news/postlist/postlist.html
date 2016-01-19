@@ -22,7 +22,7 @@
                         <p>Loading...</p>
                     </ion-item> 
                     <button ion-item *ngFor="#obj of objs[i], #j=index" class="post-item" (click)="openPost(objs[i], j)">
-                        <ion-thumbnail item-right [hidden]="obj.media.images.length > 0">
+                        <ion-thumbnail item-right [hidden]="obj.media.images.length == 0">
                             <img [src]="obj.media.images[0]" />
                         </ion-thumbnail>
                         <h2>{{obj.title}}</h2>

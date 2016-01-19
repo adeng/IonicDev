@@ -14,7 +14,7 @@
     <ion-list>
         <ion-item-sliding *ngFor="#obj of favorites, #j=index">
             <button ion-item class="post-item" (click)="openPost(j)">
-                <ion-thumbnail item-right [hidden]="obj.media.images.length > 0">
+                <ion-thumbnail item-right [hidden]="obj.media.images.length == 0">
                     <img [src]="obj.media.images[0]" />
                 </ion-thumbnail>
                 <h2>{{obj.title}}</h2>
