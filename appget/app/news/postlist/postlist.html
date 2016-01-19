@@ -14,7 +14,7 @@
     <ion-slides loop="true" autoplay="false">
         <ion-slide *ngFor="#category of categories, #i=index" class="slide">
             <scroll-content>
-                <ion-list class="list" *ngIf="category.show">
+                <ion-list class="list" *ngIf="display[i]">
                     <ion-list-header>
                         {{category.name}}
                     </ion-list-header>

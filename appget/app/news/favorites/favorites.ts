@@ -7,16 +7,17 @@ import {StoryModal} from '../modals/modals';
 export class Favorites {
     storage: Storage;
     favorites: Array<Object>;
-    modal: Modal;
+    // modal: Modal;
     
-    constructor(modal: Modal) {
-        this.modal = modal;
-        this.storage = new Storage(SqlStorage, {name: 'favorites'});
+    constructor() {
+        console.log("Initialized");
+        // this.modal = modal;
+        // this.storage = new Storage(SqlStorage, {name: 'favorites'});
         this.favorites = new Array<Object>();
-        this.storage.get('favorites').then( data => {
-            if(data != null) 
-                this.favorites = JSON.parse(data);
-        });
+        // this.storage.get('favorites').then( data => {
+        //     if(data != null) 
+        //         this.favorites = JSON.parse(data);
+        // });
     }
     
     removeItem(index: number) {
@@ -26,6 +27,6 @@ export class Favorites {
     
     openPost(index: number) {
         console.log(this.favorites[index]);
-        this.modal.open(StoryModal, {story: this.favorites[index]});
+        Modal.create(StoryModal, {story: this.favorites[index]});
     }
 }

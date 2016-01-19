@@ -1,4 +1,4 @@
-import {Modal, Page, NavParams} from 'ionic-framework/ionic';
+import {Page, NavParams} from 'ionic-framework/ionic';
 
 @Page({
     templateUrl: 'build/news/modals/filter-modal.html'

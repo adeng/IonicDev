@@ -11,14 +11,18 @@ import {PostDetail} from '../postdetail/postdetail';
 export class PostList {
     parser: XMLParser;
     objs: Array<Object>;
-    modal: Modal;
     categories: Array<Object>;
+    display: Array<boolean>;
     nav: NavController;
     
-    constructor(http: Http, modal: Modal, nav: NavController, navParams: NavParams) {
+    constructor(http: Http, nav: NavController, navParams: NavParams) {
         this.nav = nav;
-        this.modal = modal;
         this.categories = navParams.get("params");
+        this.display = [];
+        for(let i = 0; i < this.categories.length; i++) {
+            this.display[i] = true;
+        }
+        
         this.parser = new XMLParser();
         this.objs = new Array<Array<Object>>();
         
@@ -33,7 +37,7 @@ export class PostList {
     }
     
     openFilter() {
-        this.modal.open(FilterModal, {tags: this.categories});
+        Modal.create(FilterModal, {tags: this.categories});
     }
     
     openPost(posts: Array<Object>, index: number) {

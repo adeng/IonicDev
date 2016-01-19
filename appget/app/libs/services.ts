@@ -20,7 +20,7 @@ export class XMLParser {
                     resolve(arr);
                 },
                 err => {
-					http.get('/app/libs/data/sample-rss.xml').subscribe(
+					http.get('/build/libs/data/sample-rss.xml').subscribe(
 						res => {
                             let arr = a.processRSS(res.text(), category);
                             resolve(arr);

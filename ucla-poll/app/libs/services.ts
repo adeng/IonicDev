@@ -112,6 +112,14 @@ export class GoogleFormRequest {
         this.id = id;
     }
     
+    getToken(http: Http, rt: string, cID: string, scope: string) {
+        http.get("https://accounts.google.com/o/oauth2/v2/auth" + "?scope=" + encodeURIComponent(scope) + "&response_type=" + encodeURIComponent(rt) + "&client_id=" + encodeURIComponent(cID) + "&nonce=17").subscribe( data => {
+            console.log(data);
+        }, err => {
+            console.log(err);
+        });
+    }
+    
     executeFunction(http: Http, func: string, params: Array<any>) {
         let obj = {
             "function": func,
@@ -120,7 +128,11 @@ export class GoogleFormRequest {
             "devMode": true
         };
         
-        http.post("https://script.googleapis.com/v1/scripts/" + this.id + ":run", obj)
+        http.post("https://script.googleapis.com/v1/scripts/" + this.id + ":run", JSON.stringify(obj)).subscribe( data => {
+            console.log(data);
+        }, err => {
+            console.log(err);
+        });
     }
 }
 
