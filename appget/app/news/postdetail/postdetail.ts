@@ -1,5 +1,5 @@
-import {Page, NavParams, Slides, Storage, SqlStorage, Popup} from 'ionic-framework/ionic';
-
+import {Page, NavParams, NavController, Slides, Storage, SqlStorage, Alert} from 'ionic-framework/ionic';
+import {Favorite} from '../../libs/services';
 
 @Page({
     templateUrl: 'build/news/postdetail/postdetail.html'
@@ -8,13 +8,14 @@ export class PostDetail {
     posts: Array<Object>;
     index: number;
     title: string;
-    popup: Popup;
-    constructor(navParams: NavParams, popup: Popup) {
+    nav: NavController;
+    fav: Favorite = new Favorite();
+    constructor(navParams: NavParams, nav: NavController) {
         this.posts = navParams.get('posts');
-        this.storage = new Storage(SqlStorage, {name: 'favorites'});
         this.index = navParams.get('index');
+        this.nav = nav;
+        this.storage = new Storage(SqlStorage, {name: "favorites"});
         this.title = this.posts[this.index].title;
-        this.popup = popup;
     }
     
     updateSlide(event) {
@@ -23,20 +24,27 @@ export class PostDetail {
     }
     
     favorite() {
-        this.popup.confirm({
+        let alert = Alert.create({
             title: "Favorite",
-            template: "Do you want to add this story to your favorites?",
-            cancelText: "Cancel",
-            okText: "OK"
-        }).then((result, ev) => {
-            this.storage.get('favorites').then( data => {
-                let a = (data == null) ? new Array() : JSON.parse(data);
-                a.push(this.posts[this.index]);
-                this.storage.set('favorites', JSON.stringify(a));
-            });
-        }, () => {
-            console.log("Cancelled");
+            body: "Do you want to add this story to your favorites?",
+            buttons: [
+                {
+                    text: 'Cancel',
+                    handler: () => { }
+                },
+                {
+                    text: 'OK',
+                    handler: () => { 
+                        this.storage.get('favorites').then( data => {
+                            let a = (data == null) ? new Array() : JSON.parse(data);
+                            a.push(this.posts[this.index]);
+                            this.storage.set('favorites', JSON.stringify(a));
+                        });
+                    }
+                }
+            ]
         });
+        this.nav.present(alert);
     }
     
     share() {

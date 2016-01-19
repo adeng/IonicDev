@@ -104,3 +104,35 @@ export class XMLParser {
         return arr;
     }
 }
+
+import {SqlStorage, Storage, Alert} from 'ionic-framework/ionic';
+
+export class Favorite {
+    storage: Storage;
+    constructor() {
+        this.storage = new Storage(SqlStorage, {name: "favorites"});
+    }
+    
+    addFavorite(obj) {
+        Alert.create({
+            title: "Favorite",
+            template: "Do you want to add this story to your favorites?",
+            buttons: [
+                {
+                    text: 'Cancel',
+                    handler: () => { }
+                },
+                {
+                    text: 'OK',
+                    handler: () => { 
+                        this.storage.get('favorites').then( data => {
+                            let a = (data == null) ? new Array() : JSON.parse(data);
+                            a.push(obj);
+                            this.storage.set('favorites', JSON.stringify(a));
+                        });
+                    }
+                }
+            ]
+        });
+    }
+}

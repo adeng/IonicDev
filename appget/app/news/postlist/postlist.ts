@@ -37,7 +37,8 @@ export class PostList {
     }
     
     openFilter() {
-        Modal.create(FilterModal, {tags: this.categories});
+        let modal = Modal.create(FilterModal, {tags: this.categories});
+        this.nav.present(modal);
     }
     
     openPost(posts: Array<Object>, index: number) {

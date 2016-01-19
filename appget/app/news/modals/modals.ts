@@ -1,4 +1,4 @@
-import {Page, NavParams} from 'ionic-framework/ionic';
+import {Page, NavParams, ViewController} from 'ionic-framework/ionic';
 
 @Page({
     templateUrl: 'build/news/modals/filter-modal.html'
@@ -6,8 +6,14 @@ import {Page, NavParams} from 'ionic-framework/ionic';
 
 export class FilterModal {
     tags: Array<Object> = new Array();
-    constructor(nav: NavParams) {
+    view: ViewController;
+    constructor(nav: NavParams, view: ViewController) {
         this.tags = nav.get('tags');
+        this.view = view;
+    }
+    
+    dismiss() {
+        this.view.dismiss();
     }
 }
 
@@ -17,8 +23,14 @@ export class FilterModal {
 
 export class StoryModal {
     story: Object;
-    constructor(nav: NavParams) {
+    view: ViewController;
+    constructor(nav: NavParams, view: ViewController) {
         this.story = nav.get('story');
+        this.view = view;
+    }
+    
+    dismiss() {
+        this.view.dismiss();
     }
 }
 

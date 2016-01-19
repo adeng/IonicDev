@@ -1,4 +1,4 @@
-import {Page, Storage, SqlStorage, Modal} from 'ionic-framework/ionic';
+import {Page, Storage, NavController, SqlStorage, Modal} from 'ionic-framework/ionic';
 import {StoryModal} from '../modals/modals';
 
 @Page({
@@ -7,26 +7,26 @@ import {StoryModal} from '../modals/modals';
 export class Favorites {
     storage: Storage;
     favorites: Array<Object>;
-    // modal: Modal;
+    nav: NavController;
     
-    constructor() {
+    constructor(nav: NavController) {
         console.log("Initialized");
-        // this.modal = modal;
-        // this.storage = new Storage(SqlStorage, {name: 'favorites'});
+        this.nav = nav;
+        this.storage = new Storage(SqlStorage, {name: 'favorites'});
         this.favorites = new Array<Object>();
-        // this.storage.get('favorites').then( data => {
-        //     if(data != null) 
-        //         this.favorites = JSON.parse(data);
-        // });
+        this.storage.get('favorites').then( data => {
+            if(data != null) 
+                this.favorites = JSON.parse(data);
+        });
     }
     
     removeItem(index: number) {
-        let a = this.favorites.splice(index, 1);
-        this.storage.set('favorites', JSON.stringify(a));
+        this.favorites.splice(index, 1);
+        this.storage.set('favorites', JSON.stringify(this.favorites));
     }
     
     openPost(index: number) {
-        console.log(this.favorites[index]);
-        Modal.create(StoryModal, {story: this.favorites[index]});
+        let story = Modal.create(StoryModal, {story: this.favorites[index]});
+        this.nav.present(story);
     }
 }
