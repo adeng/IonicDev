@@ -1,0 +1,96 @@
+<html>
+    <head>
+        <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+        <script>
+            var boxes = 1;
+            var questions = [];
+            
+            function addAnother() {
+                boxes++;
+                $("#list").append("<li><input type='text' id='box" + boxes + "' /></li>");
+            }
+            
+            function submit() {
+                if($("#id").val() == "") {
+                    alert("Please input an ID");
+                    return;
+                }
+                
+                if($("#textbox").val() != "")
+                    addQuestion();
+                
+                var send = {};
+                send['data'] = JSON.stringify(questions);
+                send['id'] = $("#id").val();
+                
+                // $.post({
+                //     url: "http://dev.bruinmobile.com/poll/store.php",
+                //     data: send,
+                //     success: function(data) {
+                //         console.log(data);
+                //     }
+                // });
+                
+                console.log(send);
+            }
+            
+            function addQuestion() {
+                var obj = {};
+                if( $("#textbox").val() == "" ) {
+                    alert("Please enter a question");
+                    return;
+                }
+                obj['question'] = $("#textbox").val();
+                
+                var choices = [];
+                for(var i = 0; i < boxes; i++) {
+                    choices.push($("#box" + (i + 1)).val());
+                }
+                obj['choices'] = choices;
+                questions.push(obj);
+                
+                // Reset stuff
+                boxes = 1;
+                $("#list").empty();
+                $("#list").append("<li><input type='text' id='box1' /></li>");
+                $("#textbox").val("");
+            }
+            
+            function updateBox() {
+                if( $("#type").val() == "text" )
+                    $("#choicediv").hide();
+                else
+                    $("#choicediv").show();
+            }
+        </script>
+    </head>
+    <body>
+        <h2>Question ID</h2>
+        <input type="text" id="id" />
+        <br />
+        <h2>Question</h2>
+        <textarea id="textbox"></textarea>
+        <br />
+        <label for="type">Type of Question</label>
+        <select id="type" name="type" onchange="updateBox()">
+            <option value="choice">Radio Buttons</option>
+            <option value="checkbox">Checkboxes</option>
+            <option value="text">Textbox</option>
+        </select>
+        <br />
+        <div id="choicediv">
+            <h2>Choices</h2>
+            <p>Leave box blank to delete choice</p>
+            <ul id="list">
+                <li>
+                    <input type="text" id="box1" />
+                </li>
+            </ul>
+            <button onclick="addAnother()">Add Choice</button>
+        </div>
+        
+        <br />
+        <button onclick="addQuestion()">Add Question</button>
+        <button onclick="submit()">Submit</button>
+    </body>
+</html>

@@ -1,0 +1,917 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files\\nodejs\\node.exe',
+1 verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'install' ]
+2 info using npm@3.3.12
+3 info using node@v5.3.0
+4 silly loadCurrentTree Starting
+5 silly install loadCurrentTree
+6 silly install readLocalPackageData
+7 silly install normalizeTree
+8 silly loadCurrentTree Finishing
+9 silly loadIdealTree Starting
+10 silly install loadIdealTree
+11 silly cloneCurrentTree Starting
+12 silly install cloneCurrentTreeToIdealTree
+13 silly cloneCurrentTree Finishing
+14 silly loadShrinkwrap Starting
+15 silly install loadShrinkwrap
+16 silly loadShrinkwrap Finishing
+17 silly loadAllDepsIntoIdealTree Starting
+18 silly install loadAllDepsIntoIdealTree
+19 silly fetchNamedPackageData angular2
+20 silly mapToRegistry name angular2
+21 silly mapToRegistry using default registry
+22 silly mapToRegistry registry https://registry.npmjs.org/
+23 silly mapToRegistry uri https://registry.npmjs.org/angular2
+24 silly fetchNamedPackageData es6-promise
+25 silly mapToRegistry name es6-promise
+26 silly mapToRegistry using default registry
+27 silly mapToRegistry registry https://registry.npmjs.org/
+28 silly mapToRegistry uri https://registry.npmjs.org/es6-promise
+29 silly fetchNamedPackageData es6-shim
+30 silly mapToRegistry name es6-shim
+31 silly mapToRegistry using default registry
+32 silly mapToRegistry registry https://registry.npmjs.org/
+33 silly mapToRegistry uri https://registry.npmjs.org/es6-shim
+34 silly fetchNamedPackageData ionic-framework
+35 silly mapToRegistry name ionic-framework
+36 silly mapToRegistry using default registry
+37 silly mapToRegistry registry https://registry.npmjs.org/
+38 silly mapToRegistry uri https://registry.npmjs.org/ionic-framework
+39 silly fetchNamedPackageData reflect-metadata
+40 silly mapToRegistry name reflect-metadata
+41 silly mapToRegistry using default registry
+42 silly mapToRegistry registry https://registry.npmjs.org/
+43 silly mapToRegistry uri https://registry.npmjs.org/reflect-metadata
+44 silly fetchNamedPackageData rxjs
+45 silly mapToRegistry name rxjs
+46 silly mapToRegistry using default registry
+47 silly mapToRegistry registry https://registry.npmjs.org/
+48 silly mapToRegistry uri https://registry.npmjs.org/rxjs
+49 silly fetchNamedPackageData zone.js
+50 silly mapToRegistry name zone.js
+51 silly mapToRegistry using default registry
+52 silly mapToRegistry registry https://registry.npmjs.org/
+53 silly mapToRegistry uri https://registry.npmjs.org/zone.js
+54 verbose request uri https://registry.npmjs.org/ionic-framework
+55 verbose request no auth needed
+56 info attempt registry request try #1 at 12:20:53 AM
+57 verbose request id 78c1123872890ee4
+58 verbose etag "DA07HTKWHGX20E0UQV1QW0MIW"
+59 http request GET https://registry.npmjs.org/ionic-framework
+60 verbose request uri https://registry.npmjs.org/es6-promise
+61 verbose request no auth needed
+62 info attempt registry request try #1 at 12:20:53 AM
+63 verbose etag "52J7BJ2JZHN1LGBEELX9IAILJ"
+64 http request GET https://registry.npmjs.org/es6-promise
+65 verbose request uri https://registry.npmjs.org/es6-shim
+66 verbose request no auth needed
+67 info attempt registry request try #1 at 12:20:53 AM
+68 verbose etag "AKJDLGCVV81M0BL3DB0T4JQ5G"
+69 http request GET https://registry.npmjs.org/es6-shim
+70 verbose request uri https://registry.npmjs.org/angular2
+71 verbose request no auth needed
+72 info attempt registry request try #1 at 12:20:53 AM
+73 verbose etag "4U6CSHF71CAFNCX5YD1ALVSV3"
+74 http request GET https://registry.npmjs.org/angular2
+75 verbose request uri https://registry.npmjs.org/rxjs
+76 verbose request no auth needed
+77 info attempt registry request try #1 at 12:20:53 AM
+78 verbose etag "4UWJZPAT40XJYJ7VDUDBN87I4"
+79 http request GET https://registry.npmjs.org/rxjs
+80 verbose request uri https://registry.npmjs.org/zone.js
+81 verbose request no auth needed
+82 info attempt registry request try #1 at 12:20:53 AM
+83 verbose etag "CABLNWXLPWW1EYQ8X7L3EUHLT"
+84 http request GET https://registry.npmjs.org/zone.js
+85 verbose request uri https://registry.npmjs.org/reflect-metadata
+86 verbose request no auth needed
+87 info attempt registry request try #1 at 12:20:53 AM
+88 verbose etag "D5NCUNX3YBN6SZ0C4ZN0P2RLO"
+89 http request GET https://registry.npmjs.org/reflect-metadata
+90 http 304 https://registry.npmjs.org/reflect-metadata
+91 verbose headers { date: 'Tue, 19 Jan 2016 08:20:37 GMT',
+91 verbose headers   via: '1.1 varnish',
+91 verbose headers   'cache-control': 'max-age=300',
+91 verbose headers   etag: '"D5NCUNX3YBN6SZ0C4ZN0P2RLO"',
+91 verbose headers   age: '0',
+91 verbose headers   connection: 'keep-alive',
+91 verbose headers   'x-served-by': 'cache-sjc3120-SJC',
+91 verbose headers   'x-cache': 'HIT',
+91 verbose headers   'x-cache-hits': '1',
+91 verbose headers   'x-timer': 'S1453191637.979467,VS0,VE37',
+91 verbose headers   vary: 'Accept' }
+92 silly get cb [ 304,
+92 silly get   { date: 'Tue, 19 Jan 2016 08:20:37 GMT',
+92 silly get     via: '1.1 varnish',
+92 silly get     'cache-control': 'max-age=300',
+92 silly get     etag: '"D5NCUNX3YBN6SZ0C4ZN0P2RLO"',
+92 silly get     age: '0',
+92 silly get     connection: 'keep-alive',
+92 silly get     'x-served-by': 'cache-sjc3120-SJC',
+92 silly get     'x-cache': 'HIT',
+92 silly get     'x-cache-hits': '1',
+92 silly get     'x-timer': 'S1453191637.979467,VS0,VE37',
+92 silly get     vary: 'Accept' } ]
+93 verbose etag https://registry.npmjs.org/reflect-metadata from cache
+94 verbose get saving reflect-metadata to C:\Users\alber\AppData\Roaming\npm-cache\registry.npmjs.org\reflect-metadata\.cache.json
+95 http 304 https://registry.npmjs.org/zone.js
+96 verbose headers { date: 'Tue, 19 Jan 2016 08:20:37 GMT',
+96 verbose headers   via: '1.1 varnish',
+96 verbose headers   'cache-control': 'max-age=300',
+96 verbose headers   etag: '"CABLNWXLPWW1EYQ8X7L3EUHLT"',
+96 verbose headers   age: '0',
+96 verbose headers   connection: 'keep-alive',
+96 verbose headers   'x-served-by': 'cache-sjc3127-SJC',
+96 verbose headers   'x-cache': 'HIT',
+96 verbose headers   'x-cache-hits': '1',
+96 verbose headers   'x-timer': 'S1453191637.968839,VS0,VE83',
+96 verbose headers   vary: 'Accept' }
+97 silly get cb [ 304,
+97 silly get   { date: 'Tue, 19 Jan 2016 08:20:37 GMT',
+97 silly get     via: '1.1 varnish',
+97 silly get     'cache-control': 'max-age=300',
+97 silly get     etag: '"CABLNWXLPWW1EYQ8X7L3EUHLT"',
+97 silly get     age: '0',
+97 silly get     connection: 'keep-alive',
+97 silly get     'x-served-by': 'cache-sjc3127-SJC',
+97 silly get     'x-cache': 'HIT',
+97 silly get     'x-cache-hits': '1',
+97 silly get     'x-timer': 'S1453191637.968839,VS0,VE83',
+97 silly get     vary: 'Accept' } ]
+98 verbose etag https://registry.npmjs.org/zone.js from cache
+99 verbose get saving zone.js to C:\Users\alber\AppData\Roaming\npm-cache\registry.npmjs.org\zone.js\.cache.json
+100 silly resolveWithNewModule reflect-metadata@0.1.2 checking installable status
+101 silly cache add args [ 'reflect-metadata@0.1.2', null ]
+102 verbose cache add spec reflect-metadata@0.1.2
+103 silly cache add parsed spec Result {
+103 silly cache add   raw: 'reflect-metadata@0.1.2',
+103 silly cache add   scope: null,
+103 silly cache add   name: 'reflect-metadata',
+103 silly cache add   rawSpec: '0.1.2',
+103 silly cache add   spec: '0.1.2',
+103 silly cache add   type: 'version' }
+104 silly addNamed reflect-metadata@0.1.2
+105 verbose addNamed "0.1.2" is a plain semver version for reflect-metadata
+106 silly mapToRegistry name reflect-metadata
+107 silly mapToRegistry using default registry
+108 silly mapToRegistry registry https://registry.npmjs.org/
+109 silly mapToRegistry uri https://registry.npmjs.org/reflect-metadata
+110 verbose addNameVersion registry:https://registry.npmjs.org/reflect-metadata not in flight; fetching
+111 verbose get https://registry.npmjs.org/reflect-metadata not expired, no request
+112 silly resolveWithNewModule zone.js@0.5.10 checking installable status
+113 silly cache add args [ 'zone.js@0.5.10', null ]
+114 verbose cache add spec zone.js@0.5.10
+115 silly cache add parsed spec Result {
+115 silly cache add   raw: 'zone.js@0.5.10',
+115 silly cache add   scope: null,
+115 silly cache add   name: 'zone.js',
+115 silly cache add   rawSpec: '0.5.10',
+115 silly cache add   spec: '0.5.10',
+115 silly cache add   type: 'version' }
+116 silly addNamed zone.js@0.5.10
+117 verbose addNamed "0.5.10" is a plain semver version for zone.js
+118 silly mapToRegistry name zone.js
+119 silly mapToRegistry using default registry
+120 silly mapToRegistry registry https://registry.npmjs.org/
+121 silly mapToRegistry uri https://registry.npmjs.org/zone.js
+122 verbose addNameVersion registry:https://registry.npmjs.org/zone.js not in flight; fetching
+123 verbose get https://registry.npmjs.org/zone.js not expired, no request
+124 silly cache afterAdd reflect-metadata@0.1.2
+125 verbose afterAdd C:\Users\alber\AppData\Roaming\npm-cache\reflect-metadata\0.1.2\package\package.json not in flight; writing
+126 silly cache afterAdd zone.js@0.5.10
+127 verbose afterAdd C:\Users\alber\AppData\Roaming\npm-cache\zone.js\0.5.10\package\package.json not in flight; writing
+128 http 304 https://registry.npmjs.org/es6-shim
+129 verbose headers { date: 'Tue, 19 Jan 2016 08:20:37 GMT',
+129 verbose headers   via: '1.1 varnish',
+129 verbose headers   'cache-control': 'max-age=300',
+129 verbose headers   etag: '"AKJDLGCVV81M0BL3DB0T4JQ5G"',
+129 verbose headers   age: '0',
+129 verbose headers   connection: 'keep-alive',
+129 verbose headers   'x-served-by': 'cache-sjc3120-SJC',
+129 verbose headers   'x-cache': 'HIT',
+129 verbose headers   'x-cache-hits': '1',
+129 verbose headers   'x-timer': 'S1453191637.979452,VS0,VE87',
+129 verbose headers   vary: 'Accept' }
+130 silly get cb [ 304,
+130 silly get   { date: 'Tue, 19 Jan 2016 08:20:37 GMT',
+130 silly get     via: '1.1 varnish',
+130 silly get     'cache-control': 'max-age=300',
+130 silly get     etag: '"AKJDLGCVV81M0BL3DB0T4JQ5G"',
+130 silly get     age: '0',
+130 silly get     connection: 'keep-alive',
+130 silly get     'x-served-by': 'cache-sjc3120-SJC',
+130 silly get     'x-cache': 'HIT',
+130 silly get     'x-cache-hits': '1',
+130 silly get     'x-timer': 'S1453191637.979452,VS0,VE87',
+130 silly get     vary: 'Accept' } ]
+131 verbose etag https://registry.npmjs.org/es6-shim from cache
+132 verbose get saving es6-shim to C:\Users\alber\AppData\Roaming\npm-cache\registry.npmjs.org\es6-shim\.cache.json
+133 verbose afterAdd C:\Users\alber\AppData\Roaming\npm-cache\reflect-metadata\0.1.2\package\package.json written
+134 verbose afterAdd C:\Users\alber\AppData\Roaming\npm-cache\zone.js\0.5.10\package\package.json written
+135 silly resolveWithNewModule es6-shim@0.33.13 checking installable status
+136 silly cache add args [ 'es6-shim@0.33.13', null ]
+137 verbose cache add spec es6-shim@0.33.13
+138 silly cache add parsed spec Result {
+138 silly cache add   raw: 'es6-shim@0.33.13',
+138 silly cache add   scope: null,
+138 silly cache add   name: 'es6-shim',
+138 silly cache add   rawSpec: '0.33.13',
+138 silly cache add   spec: '0.33.13',
+138 silly cache add   type: 'version' }
+139 silly addNamed es6-shim@0.33.13
+140 verbose addNamed "0.33.13" is a plain semver version for es6-shim
+141 silly mapToRegistry name es6-shim
+142 silly mapToRegistry using default registry
+143 silly mapToRegistry registry https://registry.npmjs.org/
+144 silly mapToRegistry uri https://registry.npmjs.org/es6-shim
+145 verbose addNameVersion registry:https://registry.npmjs.org/es6-shim not in flight; fetching
+146 verbose get https://registry.npmjs.org/es6-shim not expired, no request
+147 silly cache afterAdd es6-shim@0.33.13
+148 verbose afterAdd C:\Users\alber\AppData\Roaming\npm-cache\es6-shim\0.33.13\package\package.json not in flight; writing
+149 verbose afterAdd C:\Users\alber\AppData\Roaming\npm-cache\es6-shim\0.33.13\package\package.json written
+150 http 304 https://registry.npmjs.org/ionic-framework
+151 verbose headers { date: 'Tue, 19 Jan 2016 08:20:37 GMT',
+151 verbose headers   via: '1.1 varnish',
+151 verbose headers   'cache-control': 'max-age=300',
+151 verbose headers   etag: '"DA07HTKWHGX20E0UQV1QW0MIW"',
+151 verbose headers   age: '0',
+151 verbose headers   connection: 'keep-alive',
+151 verbose headers   'x-served-by': 'cache-sjc3132-SJC',
+151 verbose headers   'x-cache': 'MISS',
+151 verbose headers   'x-cache-hits': '0',
+151 verbose headers   'x-timer': 'S1453191637.978786,VS0,VE245',
+151 verbose headers   vary: 'Accept' }
+152 silly get cb [ 304,
+152 silly get   { date: 'Tue, 19 Jan 2016 08:20:37 GMT',
+152 silly get     via: '1.1 varnish',
+152 silly get     'cache-control': 'max-age=300',
+152 silly get     etag: '"DA07HTKWHGX20E0UQV1QW0MIW"',
+152 silly get     age: '0',
+152 silly get     connection: 'keep-alive',
+152 silly get     'x-served-by': 'cache-sjc3132-SJC',
+152 silly get     'x-cache': 'MISS',
+152 silly get     'x-cache-hits': '0',
+152 silly get     'x-timer': 'S1453191637.978786,VS0,VE245',
+152 silly get     vary: 'Accept' } ]
+153 verbose etag https://registry.npmjs.org/ionic-framework from cache
+154 verbose get saving ionic-framework to C:\Users\alber\AppData\Roaming\npm-cache\registry.npmjs.org\ionic-framework\.cache.json
+155 silly resolveWithNewModule ionic-framework@2.0.0-alpha.49 checking installable status
+156 silly cache add args [ 'ionic-framework@2.0.0-alpha.49', null ]
+157 verbose cache add spec ionic-framework@2.0.0-alpha.49
+158 silly cache add parsed spec Result {
+158 silly cache add   raw: 'ionic-framework@2.0.0-alpha.49',
+158 silly cache add   scope: null,
+158 silly cache add   name: 'ionic-framework',
+158 silly cache add   rawSpec: '2.0.0-alpha.49',
+158 silly cache add   spec: '2.0.0-alpha.49',
+158 silly cache add   type: 'version' }
+159 silly addNamed ionic-framework@2.0.0-alpha.49
+160 verbose addNamed "2.0.0-alpha.49" is a plain semver version for ionic-framework
+161 silly mapToRegistry name ionic-framework
+162 silly mapToRegistry using default registry
+163 silly mapToRegistry registry https://registry.npmjs.org/
+164 silly mapToRegistry uri https://registry.npmjs.org/ionic-framework
+165 verbose addNameVersion registry:https://registry.npmjs.org/ionic-framework not in flight; fetching
+166 verbose get https://registry.npmjs.org/ionic-framework not expired, no request
+167 silly mapToRegistry name ionic-framework
+168 silly mapToRegistry using default registry
+169 silly mapToRegistry registry https://registry.npmjs.org/
+170 silly mapToRegistry uri https://registry.npmjs.org/ionic-framework
+171 verbose addRemoteTarball https://registry.npmjs.org/ionic-framework/-/ionic-framework-2.0.0-alpha.49.tgz not in flight; adding
+172 verbose addRemoteTarball [ 'https://registry.npmjs.org/ionic-framework/-/ionic-framework-2.0.0-alpha.49.tgz',
+172 verbose addRemoteTarball   '44579e7aef167466cd780f94baff8687137ac48b' ]
+173 info retry fetch attempt 1 at 12:20:55 AM
+174 info attempt registry request try #1 at 12:20:55 AM
+175 http fetch GET https://registry.npmjs.org/ionic-framework/-/ionic-framework-2.0.0-alpha.49.tgz
+176 http 200 https://registry.npmjs.org/es6-promise
+177 verbose headers { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+177 verbose headers   etag: '"AY65XCVVLBEQ6L52SZ6EEXQAI"',
+177 verbose headers   'content-type': 'application/json',
+177 verbose headers   'cache-control': 'max-age=300',
+177 verbose headers   'content-length': '28612',
+177 verbose headers   'accept-ranges': 'bytes',
+177 verbose headers   date: 'Tue, 19 Jan 2016 08:20:38 GMT',
+177 verbose headers   via: '1.1 varnish',
+177 verbose headers   age: '0',
+177 verbose headers   connection: 'keep-alive',
+177 verbose headers   'x-served-by': 'cache-sjc3132-SJC',
+177 verbose headers   'x-cache': 'HIT',
+177 verbose headers   'x-cache-hits': '1',
+177 verbose headers   'x-timer': 'S1453191637.969792,VS0,VE36',
+177 verbose headers   vary: 'Accept' }
+178 silly get cb [ 200,
+178 silly get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+178 silly get     etag: '"AY65XCVVLBEQ6L52SZ6EEXQAI"',
+178 silly get     'content-type': 'application/json',
+178 silly get     'cache-control': 'max-age=300',
+178 silly get     'content-length': '28612',
+178 silly get     'accept-ranges': 'bytes',
+178 silly get     date: 'Tue, 19 Jan 2016 08:20:38 GMT',
+178 silly get     via: '1.1 varnish',
+178 silly get     age: '0',
+178 silly get     connection: 'keep-alive',
+178 silly get     'x-served-by': 'cache-sjc3132-SJC',
+178 silly get     'x-cache': 'HIT',
+178 silly get     'x-cache-hits': '1',
+178 silly get     'x-timer': 'S1453191637.969792,VS0,VE36',
+178 silly get     vary: 'Accept' } ]
+179 verbose get saving es6-promise to C:\Users\alber\AppData\Roaming\npm-cache\registry.npmjs.org\es6-promise\.cache.json
+180 silly resolveWithNewModule es6-promise@3.0.2 checking installable status
+181 silly cache add args [ 'es6-promise@3.0.2', null ]
+182 verbose cache add spec es6-promise@3.0.2
+183 silly cache add parsed spec Result {
+183 silly cache add   raw: 'es6-promise@3.0.2',
+183 silly cache add   scope: null,
+183 silly cache add   name: 'es6-promise',
+183 silly cache add   rawSpec: '3.0.2',
+183 silly cache add   spec: '3.0.2',
+183 silly cache add   type: 'version' }
+184 silly addNamed es6-promise@3.0.2
+185 verbose addNamed "3.0.2" is a plain semver version for es6-promise
+186 silly mapToRegistry name es6-promise
+187 silly mapToRegistry using default registry
+188 silly mapToRegistry registry https://registry.npmjs.org/
+189 silly mapToRegistry uri https://registry.npmjs.org/es6-promise
+190 verbose addNameVersion registry:https://registry.npmjs.org/es6-promise not in flight; fetching
+191 verbose get https://registry.npmjs.org/es6-promise not expired, no request
+192 silly cache afterAdd es6-promise@3.0.2
+193 verbose afterAdd C:\Users\alber\AppData\Roaming\npm-cache\es6-promise\3.0.2\package\package.json not in flight; writing
+194 http 200 https://registry.npmjs.org/rxjs
+195 verbose headers { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+195 verbose headers   etag: '"EMNVOSO687362HI6ZT1N0HOV4"',
+195 verbose headers   'content-type': 'application/json',
+195 verbose headers   'cache-control': 'max-age=300',
+195 verbose headers   'content-length': '27165',
+195 verbose headers   'accept-ranges': 'bytes',
+195 verbose headers   date: 'Tue, 19 Jan 2016 08:20:38 GMT',
+195 verbose headers   via: '1.1 varnish',
+195 verbose headers   age: '0',
+195 verbose headers   connection: 'keep-alive',
+195 verbose headers   'x-served-by': 'cache-sjc3131-SJC',
+195 verbose headers   'x-cache': 'HIT',
+195 verbose headers   'x-cache-hits': '1',
+195 verbose headers   'x-timer': 'S1453191637.978074,VS0,VE84',
+195 verbose headers   vary: 'Accept' }
+196 silly get cb [ 200,
+196 silly get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+196 silly get     etag: '"EMNVOSO687362HI6ZT1N0HOV4"',
+196 silly get     'content-type': 'application/json',
+196 silly get     'cache-control': 'max-age=300',
+196 silly get     'content-length': '27165',
+196 silly get     'accept-ranges': 'bytes',
+196 silly get     date: 'Tue, 19 Jan 2016 08:20:38 GMT',
+196 silly get     via: '1.1 varnish',
+196 silly get     age: '0',
+196 silly get     connection: 'keep-alive',
+196 silly get     'x-served-by': 'cache-sjc3131-SJC',
+196 silly get     'x-cache': 'HIT',
+196 silly get     'x-cache-hits': '1',
+196 silly get     'x-timer': 'S1453191637.978074,VS0,VE84',
+196 silly get     vary: 'Accept' } ]
+197 verbose get saving rxjs to C:\Users\alber\AppData\Roaming\npm-cache\registry.npmjs.org\rxjs\.cache.json
+198 verbose afterAdd C:\Users\alber\AppData\Roaming\npm-cache\es6-promise\3.0.2\package\package.json written
+199 silly resolveWithNewModule rxjs@5.0.0-beta.0 checking installable status
+200 silly cache add args [ 'rxjs@5.0.0-beta.0', null ]
+201 verbose cache add spec rxjs@5.0.0-beta.0
+202 silly cache add parsed spec Result {
+202 silly cache add   raw: 'rxjs@5.0.0-beta.0',
+202 silly cache add   scope: null,
+202 silly cache add   name: 'rxjs',
+202 silly cache add   rawSpec: '5.0.0-beta.0',
+202 silly cache add   spec: '5.0.0-beta.0',
+202 silly cache add   type: 'version' }
+203 silly addNamed rxjs@5.0.0-beta.0
+204 verbose addNamed "5.0.0-beta.0" is a plain semver version for rxjs
+205 silly mapToRegistry name rxjs
+206 silly mapToRegistry using default registry
+207 silly mapToRegistry registry https://registry.npmjs.org/
+208 silly mapToRegistry uri https://registry.npmjs.org/rxjs
+209 verbose addNameVersion registry:https://registry.npmjs.org/rxjs not in flight; fetching
+210 verbose get https://registry.npmjs.org/rxjs not expired, no request
+211 silly cache afterAdd rxjs@5.0.0-beta.0
+212 verbose afterAdd C:\Users\alber\AppData\Roaming\npm-cache\rxjs\5.0.0-beta.0\package\package.json not in flight; writing
+213 verbose afterAdd C:\Users\alber\AppData\Roaming\npm-cache\rxjs\5.0.0-beta.0\package\package.json written
+214 http fetch 200 https://registry.npmjs.org/ionic-framework/-/ionic-framework-2.0.0-alpha.49.tgz
+215 http 200 https://registry.npmjs.org/angular2
+216 verbose headers { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+216 verbose headers   etag: '"8IZ8Q9IM0CARIQG140VB74GM3"',
+216 verbose headers   'content-type': 'application/json',
+216 verbose headers   'cache-control': 'max-age=300',
+216 verbose headers   'content-length': '77955',
+216 verbose headers   'accept-ranges': 'bytes',
+216 verbose headers   date: 'Tue, 19 Jan 2016 08:20:38 GMT',
+216 verbose headers   via: '1.1 varnish',
+216 verbose headers   age: '0',
+216 verbose headers   connection: 'keep-alive',
+216 verbose headers   'x-served-by': 'cache-sjc3126-SJC',
+216 verbose headers   'x-cache': 'MISS',
+216 verbose headers   'x-cache-hits': '0',
+216 verbose headers   'x-timer': 'S1453191637.977846,VS0,VE111',
+216 verbose headers   vary: 'Accept' }
+217 silly get cb [ 200,
+217 silly get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+217 silly get     etag: '"8IZ8Q9IM0CARIQG140VB74GM3"',
+217 silly get     'content-type': 'application/json',
+217 silly get     'cache-control': 'max-age=300',
+217 silly get     'content-length': '77955',
+217 silly get     'accept-ranges': 'bytes',
+217 silly get     date: 'Tue, 19 Jan 2016 08:20:38 GMT',
+217 silly get     via: '1.1 varnish',
+217 silly get     age: '0',
+217 silly get     connection: 'keep-alive',
+217 silly get     'x-served-by': 'cache-sjc3126-SJC',
+217 silly get     'x-cache': 'MISS',
+217 silly get     'x-cache-hits': '0',
+217 silly get     'x-timer': 'S1453191637.977846,VS0,VE111',
+217 silly get     vary: 'Accept' } ]
+218 verbose get saving angular2 to C:\Users\alber\AppData\Roaming\npm-cache\registry.npmjs.org\angular2\.cache.json
+219 silly resolveWithNewModule angular2@2.0.0-beta.0 checking installable status
+220 silly cache add args [ 'angular2@2.0.0-beta.0', null ]
+221 verbose cache add spec angular2@2.0.0-beta.0
+222 silly cache add parsed spec Result {
+222 silly cache add   raw: 'angular2@2.0.0-beta.0',
+222 silly cache add   scope: null,
+222 silly cache add   name: 'angular2',
+222 silly cache add   rawSpec: '2.0.0-beta.0',
+222 silly cache add   spec: '2.0.0-beta.0',
+222 silly cache add   type: 'version' }
+223 silly addNamed angular2@2.0.0-beta.0
+224 verbose addNamed "2.0.0-beta.0" is a plain semver version for angular2
+225 silly mapToRegistry name angular2
+226 silly mapToRegistry using default registry
+227 silly mapToRegistry registry https://registry.npmjs.org/
+228 silly mapToRegistry uri https://registry.npmjs.org/angular2
+229 verbose addNameVersion registry:https://registry.npmjs.org/angular2 not in flight; fetching
+230 verbose get https://registry.npmjs.org/angular2 not expired, no request
+231 silly cache afterAdd angular2@2.0.0-beta.0
+232 verbose afterAdd C:\Users\alber\AppData\Roaming\npm-cache\angular2\2.0.0-beta.0\package\package.json not in flight; writing
+233 verbose afterAdd C:\Users\alber\AppData\Roaming\npm-cache\angular2\2.0.0-beta.0\package\package.json written
+234 silly fetchAndShaCheck shasum 44579e7aef167466cd780f94baff8687137ac48b
+235 verbose addTmpTarball C:\Users\alber\AppData\Local\Temp\npm-5860-48bccdfc\registry.npmjs.org\ionic-framework\-\ionic-framework-2.0.0-alpha.49.tgz not in flight; adding
+236 verbose addTmpTarball already have metadata; skipping unpack for ionic-framework@2.0.0-alpha.49
+237 silly cache afterAdd ionic-framework@2.0.0-alpha.49
+238 verbose afterAdd C:\Users\alber\AppData\Roaming\npm-cache\ionic-framework\2.0.0-alpha.49\package\package.json not in flight; writing
+239 verbose afterAdd C:\Users\alber\AppData\Roaming\npm-cache\ionic-framework\2.0.0-alpha.49\package\package.json written
+240 silly fetchNamedPackageData colors
+241 silly mapToRegistry name colors
+242 silly mapToRegistry using default registry
+243 silly mapToRegistry registry https://registry.npmjs.org/
+244 silly mapToRegistry uri https://registry.npmjs.org/colors
+245 silly fetchNamedPackageData inquirer
+246 silly mapToRegistry name inquirer
+247 silly mapToRegistry using default registry
+248 silly mapToRegistry registry https://registry.npmjs.org/
+249 silly mapToRegistry uri https://registry.npmjs.org/inquirer
+250 silly fetchNamedPackageData lodash
+251 silly mapToRegistry name lodash
+252 silly mapToRegistry using default registry
+253 silly mapToRegistry registry https://registry.npmjs.org/
+254 silly mapToRegistry uri https://registry.npmjs.org/lodash
+255 silly fetchNamedPackageData q
+256 silly mapToRegistry name q
+257 silly mapToRegistry using default registry
+258 silly mapToRegistry registry https://registry.npmjs.org/
+259 silly mapToRegistry uri https://registry.npmjs.org/q
+260 silly fetchNamedPackageData shelljs
+261 silly mapToRegistry name shelljs
+262 silly mapToRegistry using default registry
+263 silly mapToRegistry registry https://registry.npmjs.org/
+264 silly mapToRegistry uri https://registry.npmjs.org/shelljs
+265 verbose request uri https://registry.npmjs.org/colors
+266 verbose request no auth needed
+267 info attempt registry request try #1 at 12:21:00 AM
+268 verbose etag "B0ON5VB7F6FZEL0CETZ888CKP"
+269 http request GET https://registry.npmjs.org/colors
+270 verbose request uri https://registry.npmjs.org/lodash
+271 verbose request no auth needed
+272 info attempt registry request try #1 at 12:21:00 AM
+273 verbose etag "5ZT8CLW5HA5WUMR601Y2O76DV"
+274 http request GET https://registry.npmjs.org/lodash
+275 verbose request uri https://registry.npmjs.org/inquirer
+276 verbose request no auth needed
+277 info attempt registry request try #1 at 12:21:00 AM
+278 verbose etag "4050H5UCTQGPOL5PQEKIR4Y7O"
+279 http request GET https://registry.npmjs.org/inquirer
+280 verbose request uri https://registry.npmjs.org/q
+281 verbose request no auth needed
+282 info attempt registry request try #1 at 12:21:00 AM
+283 verbose etag "BXGVCBUVYSADG416PYPOODR3A"
+284 http request GET https://registry.npmjs.org/q
+285 verbose request uri https://registry.npmjs.org/shelljs
+286 verbose request no auth needed
+287 info attempt registry request try #1 at 12:21:00 AM
+288 verbose etag "88DQW17ZZ0VVCIQSLI3ROVJC8"
+289 http request GET https://registry.npmjs.org/shelljs
+290 http 304 https://registry.npmjs.org/q
+291 verbose headers { date: 'Tue, 19 Jan 2016 08:20:44 GMT',
+291 verbose headers   via: '1.1 varnish',
+291 verbose headers   'cache-control': 'max-age=300',
+291 verbose headers   etag: '"BXGVCBUVYSADG416PYPOODR3A"',
+291 verbose headers   age: '274',
+291 verbose headers   connection: 'keep-alive',
+291 verbose headers   'x-served-by': 'cache-sjc3124-SJC',
+291 verbose headers   'x-cache': 'HIT',
+291 verbose headers   'x-cache-hits': '7',
+291 verbose headers   'x-timer': 'S1453191644.607821,VS0,VE0',
+291 verbose headers   vary: 'Accept' }
+292 silly get cb [ 304,
+292 silly get   { date: 'Tue, 19 Jan 2016 08:20:44 GMT',
+292 silly get     via: '1.1 varnish',
+292 silly get     'cache-control': 'max-age=300',
+292 silly get     etag: '"BXGVCBUVYSADG416PYPOODR3A"',
+292 silly get     age: '274',
+292 silly get     connection: 'keep-alive',
+292 silly get     'x-served-by': 'cache-sjc3124-SJC',
+292 silly get     'x-cache': 'HIT',
+292 silly get     'x-cache-hits': '7',
+292 silly get     'x-timer': 'S1453191644.607821,VS0,VE0',
+292 silly get     vary: 'Accept' } ]
+293 verbose etag https://registry.npmjs.org/q from cache
+294 verbose get saving q to C:\Users\alber\AppData\Roaming\npm-cache\registry.npmjs.org\q\.cache.json
+295 silly resolveWithNewModule q@1.4.1 checking installable status
+296 silly cache add args [ 'q@1.4.1', null ]
+297 verbose cache add spec q@1.4.1
+298 silly cache add parsed spec Result {
+298 silly cache add   raw: 'q@1.4.1',
+298 silly cache add   scope: null,
+298 silly cache add   name: 'q',
+298 silly cache add   rawSpec: '1.4.1',
+298 silly cache add   spec: '1.4.1',
+298 silly cache add   type: 'version' }
+299 silly addNamed q@1.4.1
+300 verbose addNamed "1.4.1" is a plain semver version for q
+301 silly mapToRegistry name q
+302 silly mapToRegistry using default registry
+303 silly mapToRegistry registry https://registry.npmjs.org/
+304 silly mapToRegistry uri https://registry.npmjs.org/q
+305 verbose addNameVersion registry:https://registry.npmjs.org/q not in flight; fetching
+306 verbose get https://registry.npmjs.org/q not expired, no request
+307 silly cache afterAdd q@1.4.1
+308 verbose afterAdd C:\Users\alber\AppData\Roaming\npm-cache\q\1.4.1\package\package.json not in flight; writing
+309 verbose afterAdd C:\Users\alber\AppData\Roaming\npm-cache\q\1.4.1\package\package.json written
+310 http 200 https://registry.npmjs.org/colors
+311 verbose headers { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+311 verbose headers   etag: '"3GF8XG8VR6VD7GWTNQZ56PKBB"',
+311 verbose headers   'content-type': 'application/json',
+311 verbose headers   'cache-control': 'max-age=300',
+311 verbose headers   'content-length': '20674',
+311 verbose headers   'accept-ranges': 'bytes',
+311 verbose headers   date: 'Tue, 19 Jan 2016 08:20:44 GMT',
+311 verbose headers   via: '1.1 varnish',
+311 verbose headers   age: '186',
+311 verbose headers   connection: 'keep-alive',
+311 verbose headers   'x-served-by': 'cache-sjc3121-SJC',
+311 verbose headers   'x-cache': 'HIT',
+311 verbose headers   'x-cache-hits': '12',
+311 verbose headers   'x-timer': 'S1453191644.606878,VS0,VE0',
+311 verbose headers   vary: 'Accept' }
+312 silly get cb [ 200,
+312 silly get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+312 silly get     etag: '"3GF8XG8VR6VD7GWTNQZ56PKBB"',
+312 silly get     'content-type': 'application/json',
+312 silly get     'cache-control': 'max-age=300',
+312 silly get     'content-length': '20674',
+312 silly get     'accept-ranges': 'bytes',
+312 silly get     date: 'Tue, 19 Jan 2016 08:20:44 GMT',
+312 silly get     via: '1.1 varnish',
+312 silly get     age: '186',
+312 silly get     connection: 'keep-alive',
+312 silly get     'x-served-by': 'cache-sjc3121-SJC',
+312 silly get     'x-cache': 'HIT',
+312 silly get     'x-cache-hits': '12',
+312 silly get     'x-timer': 'S1453191644.606878,VS0,VE0',
+312 silly get     vary: 'Accept' } ]
+313 verbose get saving colors to C:\Users\alber\AppData\Roaming\npm-cache\registry.npmjs.org\colors\.cache.json
+314 silly resolveWithNewModule colors@1.1.2 checking installable status
+315 silly cache add args [ 'colors@^1.1.2', null ]
+316 verbose cache add spec colors@^1.1.2
+317 silly cache add parsed spec Result {
+317 silly cache add   raw: 'colors@^1.1.2',
+317 silly cache add   scope: null,
+317 silly cache add   name: 'colors',
+317 silly cache add   rawSpec: '^1.1.2',
+317 silly cache add   spec: '>=1.1.2 <2.0.0',
+317 silly cache add   type: 'range' }
+318 silly addNamed colors@>=1.1.2 <2.0.0
+319 verbose addNamed ">=1.1.2 <2.0.0" is a valid semver range for colors
+320 silly addNameRange { name: 'colors', range: '>=1.1.2 <2.0.0', hasData: false }
+321 silly mapToRegistry name colors
+322 silly mapToRegistry using default registry
+323 silly mapToRegistry registry https://registry.npmjs.org/
+324 silly mapToRegistry uri https://registry.npmjs.org/colors
+325 verbose addNameRange registry:https://registry.npmjs.org/colors not in flight; fetching
+326 verbose get https://registry.npmjs.org/colors not expired, no request
+327 silly addNameRange number 2 { name: 'colors', range: '>=1.1.2 <2.0.0', hasData: true }
+328 silly addNameRange versions [ 'colors',
+328 silly addNameRange   [ '0.3.0',
+328 silly addNameRange     '0.5.0',
+328 silly addNameRange     '0.5.1',
+328 silly addNameRange     '0.6.0',
+328 silly addNameRange     '0.6.0-1',
+328 silly addNameRange     '0.6.1',
+328 silly addNameRange     '0.6.2',
+328 silly addNameRange     '1.0.0',
+328 silly addNameRange     '1.0.1',
+328 silly addNameRange     '1.0.2',
+328 silly addNameRange     '1.0.3',
+328 silly addNameRange     '1.1.0',
+328 silly addNameRange     '1.1.1',
+328 silly addNameRange     '1.1.2' ] ]
+329 silly addNamed colors@1.1.2
+330 verbose addNamed "1.1.2" is a plain semver version for colors
+331 silly cache afterAdd colors@1.1.2
+332 verbose afterAdd C:\Users\alber\AppData\Roaming\npm-cache\colors\1.1.2\package\package.json not in flight; writing
+333 verbose afterAdd C:\Users\alber\AppData\Roaming\npm-cache\colors\1.1.2\package\package.json written
+334 http 200 https://registry.npmjs.org/shelljs
+335 verbose headers { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+335 verbose headers   etag: '"9ODKG8Q00KWA467LYAOWH4XGI"',
+335 verbose headers   'content-type': 'application/json',
+335 verbose headers   'cache-control': 'max-age=300',
+335 verbose headers   'content-length': '54094',
+335 verbose headers   'accept-ranges': 'bytes',
+335 verbose headers   date: 'Tue, 19 Jan 2016 08:20:44 GMT',
+335 verbose headers   via: '1.1 varnish',
+335 verbose headers   age: '110',
+335 verbose headers   connection: 'keep-alive',
+335 verbose headers   'x-served-by': 'cache-sjc3120-SJC',
+335 verbose headers   'x-cache': 'HIT',
+335 verbose headers   'x-cache-hits': '4',
+335 verbose headers   'x-timer': 'S1453191644.615709,VS0,VE0',
+335 verbose headers   vary: 'Accept' }
+336 silly get cb [ 200,
+336 silly get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+336 silly get     etag: '"9ODKG8Q00KWA467LYAOWH4XGI"',
+336 silly get     'content-type': 'application/json',
+336 silly get     'cache-control': 'max-age=300',
+336 silly get     'content-length': '54094',
+336 silly get     'accept-ranges': 'bytes',
+336 silly get     date: 'Tue, 19 Jan 2016 08:20:44 GMT',
+336 silly get     via: '1.1 varnish',
+336 silly get     age: '110',
+336 silly get     connection: 'keep-alive',
+336 silly get     'x-served-by': 'cache-sjc3120-SJC',
+336 silly get     'x-cache': 'HIT',
+336 silly get     'x-cache-hits': '4',
+336 silly get     'x-timer': 'S1453191644.615709,VS0,VE0',
+336 silly get     vary: 'Accept' } ]
+337 verbose get saving shelljs to C:\Users\alber\AppData\Roaming\npm-cache\registry.npmjs.org\shelljs\.cache.json
+338 http 200 https://registry.npmjs.org/inquirer
+339 verbose headers { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+339 verbose headers   etag: '"71VNXQ9VIXHR5UWNBLKXEDVS1"',
+339 verbose headers   'content-type': 'application/json',
+339 verbose headers   'cache-control': 'max-age=300',
+339 verbose headers   'content-length': '67710',
+339 verbose headers   'accept-ranges': 'bytes',
+339 verbose headers   date: 'Tue, 19 Jan 2016 08:20:44 GMT',
+339 verbose headers   via: '1.1 varnish',
+339 verbose headers   age: '113',
+339 verbose headers   connection: 'keep-alive',
+339 verbose headers   'x-served-by': 'cache-sjc3120-SJC',
+339 verbose headers   'x-cache': 'HIT',
+339 verbose headers   'x-cache-hits': '2',
+339 verbose headers   'x-timer': 'S1453191644.615766,VS0,VE0',
+339 verbose headers   vary: 'Accept' }
+340 silly get cb [ 200,
+340 silly get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+340 silly get     etag: '"71VNXQ9VIXHR5UWNBLKXEDVS1"',
+340 silly get     'content-type': 'application/json',
+340 silly get     'cache-control': 'max-age=300',
+340 silly get     'content-length': '67710',
+340 silly get     'accept-ranges': 'bytes',
+340 silly get     date: 'Tue, 19 Jan 2016 08:20:44 GMT',
+340 silly get     via: '1.1 varnish',
+340 silly get     age: '113',
+340 silly get     connection: 'keep-alive',
+340 silly get     'x-served-by': 'cache-sjc3120-SJC',
+340 silly get     'x-cache': 'HIT',
+340 silly get     'x-cache-hits': '2',
+340 silly get     'x-timer': 'S1453191644.615766,VS0,VE0',
+340 silly get     vary: 'Accept' } ]
+341 verbose get saving inquirer to C:\Users\alber\AppData\Roaming\npm-cache\registry.npmjs.org\inquirer\.cache.json
+342 silly resolveWithNewModule shelljs@0.5.3 checking installable status
+343 silly cache add args [ 'shelljs@0.5.3', null ]
+344 verbose cache add spec shelljs@0.5.3
+345 silly cache add parsed spec Result {
+345 silly cache add   raw: 'shelljs@0.5.3',
+345 silly cache add   scope: null,
+345 silly cache add   name: 'shelljs',
+345 silly cache add   rawSpec: '0.5.3',
+345 silly cache add   spec: '0.5.3',
+345 silly cache add   type: 'version' }
+346 silly addNamed shelljs@0.5.3
+347 verbose addNamed "0.5.3" is a plain semver version for shelljs
+348 silly mapToRegistry name shelljs
+349 silly mapToRegistry using default registry
+350 silly mapToRegistry registry https://registry.npmjs.org/
+351 silly mapToRegistry uri https://registry.npmjs.org/shelljs
+352 verbose addNameVersion registry:https://registry.npmjs.org/shelljs not in flight; fetching
+353 silly resolveWithNewModule inquirer@0.11.0 checking installable status
+354 silly cache add args [ 'inquirer@0.11.0', null ]
+355 verbose cache add spec inquirer@0.11.0
+356 silly cache add parsed spec Result {
+356 silly cache add   raw: 'inquirer@0.11.0',
+356 silly cache add   scope: null,
+356 silly cache add   name: 'inquirer',
+356 silly cache add   rawSpec: '0.11.0',
+356 silly cache add   spec: '0.11.0',
+356 silly cache add   type: 'version' }
+357 silly addNamed inquirer@0.11.0
+358 verbose addNamed "0.11.0" is a plain semver version for inquirer
+359 silly mapToRegistry name inquirer
+360 silly mapToRegistry using default registry
+361 silly mapToRegistry registry https://registry.npmjs.org/
+362 silly mapToRegistry uri https://registry.npmjs.org/inquirer
+363 verbose addNameVersion registry:https://registry.npmjs.org/inquirer not in flight; fetching
+364 verbose get https://registry.npmjs.org/shelljs not expired, no request
+365 verbose get https://registry.npmjs.org/inquirer not expired, no request
+366 silly cache afterAdd inquirer@0.11.0
+367 verbose afterAdd C:\Users\alber\AppData\Roaming\npm-cache\inquirer\0.11.0\package\package.json not in flight; writing
+368 silly cache afterAdd shelljs@0.5.3
+369 verbose afterAdd C:\Users\alber\AppData\Roaming\npm-cache\shelljs\0.5.3\package\package.json not in flight; writing
+370 verbose afterAdd C:\Users\alber\AppData\Roaming\npm-cache\shelljs\0.5.3\package\package.json written
+371 verbose afterAdd C:\Users\alber\AppData\Roaming\npm-cache\inquirer\0.11.0\package\package.json written
+372 http 200 https://registry.npmjs.org/lodash
+373 verbose headers { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+373 verbose headers   etag: '"1FL6NNXPKZS18J9WLOARCRV3R"',
+373 verbose headers   'content-type': 'application/json',
+373 verbose headers   'cache-control': 'max-age=300',
+373 verbose headers   'content-length': '107492',
+373 verbose headers   'accept-ranges': 'bytes',
+373 verbose headers   date: 'Tue, 19 Jan 2016 08:20:44 GMT',
+373 verbose headers   via: '1.1 varnish',
+373 verbose headers   age: '136',
+373 verbose headers   connection: 'keep-alive',
+373 verbose headers   'x-served-by': 'cache-sjc3133-SJC',
+373 verbose headers   'x-cache': 'HIT',
+373 verbose headers   'x-cache-hits': '9',
+373 verbose headers   'x-timer': 'S1453191644.606857,VS0,VE0',
+373 verbose headers   vary: 'Accept' }
+374 silly get cb [ 200,
+374 silly get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+374 silly get     etag: '"1FL6NNXPKZS18J9WLOARCRV3R"',
+374 silly get     'content-type': 'application/json',
+374 silly get     'cache-control': 'max-age=300',
+374 silly get     'content-length': '107492',
+374 silly get     'accept-ranges': 'bytes',
+374 silly get     date: 'Tue, 19 Jan 2016 08:20:44 GMT',
+374 silly get     via: '1.1 varnish',
+374 silly get     age: '136',
+374 silly get     connection: 'keep-alive',
+374 silly get     'x-served-by': 'cache-sjc3133-SJC',
+374 silly get     'x-cache': 'HIT',
+374 silly get     'x-cache-hits': '9',
+374 silly get     'x-timer': 'S1453191644.606857,VS0,VE0',
+374 silly get     vary: 'Accept' } ]
+375 verbose get saving lodash to C:\Users\alber\AppData\Roaming\npm-cache\registry.npmjs.org\lodash\.cache.json
+376 silly resolveWithNewModule lodash@3.10.1 checking installable status
+377 silly cache add args [ 'lodash@3.10.1', null ]
+378 verbose cache add spec lodash@3.10.1
+379 silly cache add parsed spec Result {
+379 silly cache add   raw: 'lodash@3.10.1',
+379 silly cache add   scope: null,
+379 silly cache add   name: 'lodash',
+379 silly cache add   rawSpec: '3.10.1',
+379 silly cache add   spec: '3.10.1',
+379 silly cache add   type: 'version' }
+380 silly addNamed lodash@3.10.1
+381 verbose addNamed "3.10.1" is a plain semver version for lodash
+382 silly mapToRegistry name lodash
+383 silly mapToRegistry using default registry
+384 silly mapToRegistry registry https://registry.npmjs.org/
+385 silly mapToRegistry uri https://registry.npmjs.org/lodash
+386 verbose addNameVersion registry:https://registry.npmjs.org/lodash not in flight; fetching
+387 verbose get https://registry.npmjs.org/lodash not expired, no request
+388 silly cache afterAdd lodash@3.10.1
+389 verbose afterAdd C:\Users\alber\AppData\Roaming\npm-cache\lodash\3.10.1\package\package.json not in flight; writing
+390 verbose afterAdd C:\Users\alber\AppData\Roaming\npm-cache\lodash\3.10.1\package\package.json written
+391 silly fetchNamedPackageData ansi-escapes
+392 silly mapToRegistry name ansi-escapes
+393 silly mapToRegistry using default registry
+394 silly mapToRegistry registry https://registry.npmjs.org/
+395 silly mapToRegistry uri https://registry.npmjs.org/ansi-escapes
+396 silly fetchNamedPackageData ansi-regex
+397 silly mapToRegistry name ansi-regex
+398 silly mapToRegistry using default registry
+399 silly mapToRegistry registry https://registry.npmjs.org/
+400 silly mapToRegistry uri https://registry.npmjs.org/ansi-regex
+401 silly fetchNamedPackageData chalk
+402 silly mapToRegistry name chalk
+403 silly mapToRegistry using default registry
+404 silly mapToRegistry registry https://registry.npmjs.org/
+405 silly mapToRegistry uri https://registry.npmjs.org/chalk
+406 silly fetchNamedPackageData cli-cursor
+407 silly mapToRegistry name cli-cursor
+408 silly mapToRegistry using default registry
+409 silly mapToRegistry registry https://registry.npmjs.org/
+410 silly mapToRegistry uri https://registry.npmjs.org/cli-cursor
+411 silly fetchNamedPackageData cli-width
+412 silly mapToRegistry name cli-width
+413 silly mapToRegistry using default registry
+414 silly mapToRegistry registry https://registry.npmjs.org/
+415 silly mapToRegistry uri https://registry.npmjs.org/cli-width
+416 silly fetchNamedPackageData figures
+417 silly mapToRegistry name figures
+418 silly mapToRegistry using default registry
+419 silly mapToRegistry registry https://registry.npmjs.org/
+420 silly mapToRegistry uri https://registry.npmjs.org/figures
+421 silly fetchNamedPackageData readline2
+422 silly mapToRegistry name readline2
+423 silly mapToRegistry using default registry
+424 silly mapToRegistry registry https://registry.npmjs.org/
+425 silly mapToRegistry uri https://registry.npmjs.org/readline2
+426 silly fetchNamedPackageData run-async
+427 silly mapToRegistry name run-async
+428 silly mapToRegistry using default registry
+429 silly mapToRegistry registry https://registry.npmjs.org/
+430 silly mapToRegistry uri https://registry.npmjs.org/run-async
+431 silly fetchNamedPackageData rx-lite
+432 silly mapToRegistry name rx-lite
+433 silly mapToRegistry using default registry
+434 silly mapToRegistry registry https://registry.npmjs.org/
+435 silly mapToRegistry uri https://registry.npmjs.org/rx-lite
+436 silly fetchNamedPackageData strip-ansi
+437 silly mapToRegistry name strip-ansi
+438 silly mapToRegistry using default registry
+439 silly mapToRegistry registry https://registry.npmjs.org/
+440 silly mapToRegistry uri https://registry.npmjs.org/strip-ansi
+441 silly fetchNamedPackageData through
+442 silly mapToRegistry name through
+443 silly mapToRegistry using default registry
+444 silly mapToRegistry registry https://registry.npmjs.org/
+445 silly mapToRegistry uri https://registry.npmjs.org/through
+446 verbose request uri https://registry.npmjs.org/chalk
+447 verbose request no auth needed
+448 info attempt registry request try #1 at 12:21:04 AM
+449 verbose etag "7R7IP370JM0BVU8O383LVUHUT"
+450 http request GET https://registry.npmjs.org/chalk
+451 verbose request uri https://registry.npmjs.org/ansi-regex
+452 verbose request no auth needed
+453 info attempt registry request try #1 at 12:21:04 AM
+454 verbose etag "1MRHZG3BYMGFOFAI4EBGRPR9U"
+455 http request GET https://registry.npmjs.org/ansi-regex
+456 verbose request uri https://registry.npmjs.org/ansi-escapes
+457 verbose request no auth needed
+458 info attempt registry request try #1 at 12:21:04 AM
+459 verbose etag "5NBLOOKJKBZPP5JELNCSJS8BN"
+460 http request GET https://registry.npmjs.org/ansi-escapes
+461 verbose request uri https://registry.npmjs.org/cli-cursor
+462 verbose request no auth needed
+463 info attempt registry request try #1 at 12:21:04 AM
+464 verbose etag "C27858GNJL7V0G68WZBTTUQBQ"
+465 http request GET https://registry.npmjs.org/cli-cursor
+466 verbose request uri https://registry.npmjs.org/cli-width
+467 verbose request no auth needed
+468 info attempt registry request try #1 at 12:21:04 AM
+469 verbose etag "2SKD0MRAQJOO3XW4VLDT70RMN"
+470 http request GET https://registry.npmjs.org/cli-width
+471 verbose request uri https://registry.npmjs.org/readline2
+472 verbose request no auth needed
+473 info attempt registry request try #1 at 12:21:04 AM
+474 verbose etag "5RNSSOEQU7AFOKPK77IF7645M"
+475 http request GET https://registry.npmjs.org/readline2
+476 verbose request uri https://registry.npmjs.org/figures
+477 verbose request no auth needed
+478 info attempt registry request try #1 at 12:21:04 AM
+479 verbose etag "4M063ED6QQYBVG2GICKFCCF63"
+480 http request GET https://registry.npmjs.org/figures
+481 verbose request uri https://registry.npmjs.org/run-async
+482 verbose request no auth needed
+483 info attempt registry request try #1 at 12:21:04 AM
+484 verbose etag "ACRVL0UFRODQLLLNNM86O3LZ9"
+485 http request GET https://registry.npmjs.org/run-async
+486 verbose request uri https://registry.npmjs.org/through
+487 verbose request no auth needed
+488 info attempt registry request try #1 at 12:21:04 AM
+489 verbose etag "478S4RFYVMU1VUBVDMN1NRVB1"
+490 http request GET https://registry.npmjs.org/through
+491 verbose request uri https://registry.npmjs.org/strip-ansi
+492 verbose request no auth needed
+493 info attempt registry request try #1 at 12:21:04 AM
+494 verbose etag "RBPZS1J21XBKPHESKAG048ZH"
+495 http request GET https://registry.npmjs.org/strip-ansi
+496 verbose request uri https://registry.npmjs.org/rx-lite
+497 verbose request no auth needed
+498 info attempt registry request try #1 at 12:21:04 AM
+499 verbose etag "DWKZELU4ZLBNICCM07BIXYN3W"
+500 http request GET https://registry.npmjs.org/rx-lite
+501 verbose stack Error: read ECONNRESET
+501 verbose stack     at exports._errnoException (util.js:855:11)
+501 verbose stack     at TLSWrap.onread (net.js:544:26)
+502 verbose cwd C:\Users\alber\OneDrive\Documents\GitHub\IonicDev\poll
+503 error Windows_NT 10.0.10586
+504 error argv "C:\\Program Files\\nodejs\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install"
+505 error node v5.3.0
+506 error npm  v3.3.12
+507 error code ECONNRESET
+508 error errno ECONNRESET
+509 error syscall read
+510 error network read ECONNRESET
+510 error network This is most likely not a problem with npm itself
+510 error network and is related to network connectivity.
+510 error network In most cases you are behind a proxy or have bad network settings.
+510 error network
+510 error network If you are behind a proxy, please make sure that the
+510 error network 'proxy' config is set properly.  See: 'npm help config'
+511 verbose exit [ 1, true ]

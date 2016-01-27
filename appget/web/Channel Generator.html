@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<!-- saved from url=(0056)http://dev.bruinmobile.com/appget/channel-generator.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252"><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style>
+  <title>Channel Generator</title>
+  <script src="./js/angular.min.js"></script>
+  <style>
+    .bar {
+      height: 5px;
+      background-color: #888;
+    }
+    .right {
+      float: right;
+    }
+  </style>
+</head>
+
+<body>
+  <div ng-app="app" ng-controller="ctrl" class="ng-scope">
+
+    <button ng-click="addChannel()">Add Channel</button>
+    <br><br><div class="bar"><br>
+
+    <!-- ngRepeat: channel in json.channels -->
+
+
+    <br>
+    <textarea style="width:100%; height: 300px" class="ng-binding">{"channels":[]}</textarea>
+  </div>
+
+  <script>
+    angular.module('app', []).controller('ctrl', function($scope) {
+      $scope.types = ['home', 'postlist', 'favorites'];
+      $scope.icons = ['home', 'document', 'star', 'chatbubbles', 'stats-bars'];
+
+      $scope.json = {
+        channels: []
+      };
+
+      $scope.addChannel = function() {
+        $scope.json.channels.push({
+          type: '',
+          title: '',
+          icon: '',
+          params: []
+        });
+      };
+
+      $scope.removeChannel = function(index) {
+        $scope.json.channels.splice(index, 1);
+      };
+
+
+      $scope.addParam = function(index) {
+        $scope.json.channels[index].params.push({
+          name: '',
+          show: true,
+          url: ''
+        });
+      };
+
+      $scope.removeParam = function(channelIndex, paramIndex) {
+        $scope.json.channels[index].params.splice(paramIndex, 1);
+      };
+    });
+  </script>
+
+
+</div></body></html>

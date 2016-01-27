@@ -36,7 +36,7 @@ export class PostDetail {
                     text: 'OK',
                     handler: () => { 
                         this.storage.get('favorites').then( data => {
-                            let a = (data == null) ? new Array() : JSON.parse(data);
+                            let a = (data == null) ? [] : JSON.parse(data);
                             a.push(this.posts[this.index]);
                             this.storage.set('favorites', JSON.stringify(a));
                         });

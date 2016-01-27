@@ -1,0 +1,18 @@
+<ion-navbar *navbar>
+  <ion-title>Tab 1</ion-title>
+</ion-navbar>
+
+<ion-content class="page1">
+    <ion-item padding>
+        <h2>{{question}}</h2>
+        <br />
+        <p>Selected: {{choices[selected]}}</p>
+    </ion-item>
+    <ion-list radio-group>
+        <ion-radio *ngFor="#choice of choices, #i=index" (click)="select(i)" [checked]="orderBy1">
+            {{choice}}
+        </ion-radio>
+    </ion-list>
+    
+    <button padding block (click)="show()">Submit</button>
+</ion-content>

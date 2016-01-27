@@ -10,7 +10,6 @@ export class Favorites {
     nav: NavController;
     
     constructor(nav: NavController) {
-        console.log("Initialized");
         this.nav = nav;
         this.storage = new Storage(SqlStorage, {name: 'favorites'});
         this.favorites = new Array<Object>();
