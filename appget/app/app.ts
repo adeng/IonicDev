@@ -3,6 +3,7 @@ import {Http} from 'angular2/http';
 import {Home} from './home/home';
 import {PostList} from './news/postlist/postlist';
 import {Favorites} from './news/favorites/favorites';
+import {Featured} from './display/featured/featured';
 
 
 @App({
@@ -18,7 +19,8 @@ export class MyApp {
         let channelObj = {
             "home": Home,
             "postlist": PostList,
-            "favorites": Favorites
+            "favorites": Favorites,
+            "featured": Featured
         };
         
         http.get("/build/app.json").subscribe( res => {

@@ -23,15 +23,13 @@
                 send['data'] = JSON.stringify(questions);
                 send['id'] = $("#id").val();
                 
-                // $.post({
-                //     url: "http://dev.bruinmobile.com/poll/store.php",
-                //     data: send,
-                //     success: function(data) {
-                //         console.log(data);
-                //     }
-                // });
-                
-                console.log(send);
+                $.post({
+                    url: "http://dev.bruinmobile.com/poll/store.php",
+                    data: send,
+                    success: function(data) {
+                        console.log("Sent ", data);
+                    }
+                });
             }
             
             function addQuestion() {
@@ -46,7 +44,13 @@
                 for(var i = 0; i < boxes; i++) {
                     choices.push($("#box" + (i + 1)).val());
                 }
-                obj['choices'] = choices;
+                obj['type'] = $("#type").val();
+                
+                if( obj['type'] != "text" ) {
+                    obj['choices'] = choices;
+                } else {
+                    obj['choices'] 
+                }
                 questions.push(obj);
                 
                 // Reset stuff
@@ -54,6 +58,8 @@
                 $("#list").empty();
                 $("#list").append("<li><input type='text' id='box1' /></li>");
                 $("#textbox").val("");
+                
+                $("#results").append("<li>" + obj['question'] + "</li>");
             }
             
             function updateBox() {
@@ -70,7 +76,7 @@
         <br />
         <h2>Question</h2>
         <textarea id="textbox"></textarea>
-        <br />
+        <br /><br />
         <label for="type">Type of Question</label>
         <select id="type" name="type" onchange="updateBox()">
             <option value="choice">Radio Buttons</option>
@@ -92,5 +98,9 @@
         <br />
         <button onclick="addQuestion()">Add Question</button>
         <button onclick="submit()">Submit</button>
+        <br />
+        <hr />
+        <h2>Questions</h2>
+        <ol id="results"></ol>
     </body>
 </html>

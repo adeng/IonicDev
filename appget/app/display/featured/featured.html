@@ -1,0 +1,27 @@
+<ion-navbar primary *navbar>
+    <button menuToggle>
+        <icon menu></icon>
+    </button>
+    <ion-title>{{data.title}}</ion-title>
+</ion-navbar>
+
+<ion-content class="featured">
+    <div class="header-img" [hidden]="data.image == undefined">
+        <img [src]="data.image" />
+    </div>
+    <ion-item class="header">
+        <div class="header-text">
+            <p>This is a description</p>
+            <button clear>Read More</button>
+        </div>
+    </ion-item>
+    <ion-list-header [hidden]="data.items == null">
+        List Items
+    </ion-list-header>
+    <button ion-item class="list-item" *ngFor="#item of data.items" [hidden]="data.items == null" (click)="navigate(item.id)">
+        <ion-avatar item-left>
+            <img [src]="item.image" />
+        </ion-avatar>
+        <h2>{{item.title}}</h2>
+    </button>
+</ion-content>

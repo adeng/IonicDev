@@ -13,26 +13,32 @@
             "params": [
                 {
                     "name": "News", 
+                    "show": true, 
                     "url": "http://dailybruin.com/category/news/feed/"
                 }, 
                 {
                     "name": "Sports", 
+                    "show": true, 
                     "url": "http://dailybruin.com/category/sports/feed/"
                 }, 
                 {
                     "name": "A&E", 
+                    "show": true, 
                     "url": "http://dailybruin.com/category/arts-entertainment/feed/"
                 }, 
                 {
                     "name": "Opinion", 
+                    "show": true, 
                     "url": "http://dailybruin.com/category/opinion/feed/"
                 }, 
                 {
                     "name": "Radio", 
+                    "show": true, 
                     "url": "http://dailybruin.com/category/radio/feed/"
                 }, 
                 {
                     "name": "Video", 
+                    "show": true, 
                     "url": "http://dailybruin.com/category/video/feed/"
                 }
             ]
@@ -42,6 +48,99 @@
             "title": "Favorites",
             "icon": "star",
             "params": null
+        },
+        {
+            "type": "featured",
+            "title": "Featured",
+            "icon": "map",
+            "params": {
+                "main": {
+                    "title": "Home Featured",
+                    "short": "This is a short description",
+                    "long": "<p>This is a long HTML description</p>",
+                    "image": "http://desktopwallpaperswide.com/wp-content/uploads/2013/01/Bing-Hd-Wallpapers-3.jpg",
+                    "items": [
+                        {
+                            "title": "Nested One",
+                            "id": "1",
+                            "image": "http://desktopwallpaperswide.com/wp-content/uploads/2013/01/Bing-Hd-Wallpapers-3.jpg"
+                        },
+                        {
+                            "title": "Nested Two",
+                            "id": "2",
+                            "image": "http://desktopwallpaperswide.com/wp-content/uploads/2013/01/Bing-Hd-Wallpapers-3.jpg"
+                        },
+                        {
+                            "title": "Nested Three",
+                            "id": "3",
+                            "image": "http://desktopwallpaperswide.com/wp-content/uploads/2013/01/Bing-Hd-Wallpapers-3.jpg"
+                        },
+                        {
+                            "title": "Nested Four",
+                            "id": "4",
+                            "image": "http://desktopwallpaperswide.com/wp-content/uploads/2013/01/Bing-Hd-Wallpapers-3.jpg"
+                        },
+                        {
+                            "title": "Nested Five",
+                            "id": "5",
+                            "image": "http://desktopwallpaperswide.com/wp-content/uploads/2013/01/Bing-Hd-Wallpapers-3.jpg"
+                        }
+                    ],
+                    "contact": null
+                },
+                "1": {
+                    "title": "Nested One",
+                    "short": "item",
+                    "long": null,
+                    "image": "http://desktopwallpaperswide.com/wp-content/uploads/2013/01/Bing-Hd-Wallpapers-3.jpg",
+                    "items": null,
+                    "contact": null
+                },
+                "2": {
+                    "title": "Nested Two",
+                    "short": "item",
+                    "long": null,
+                    "image": "http://desktopwallpaperswide.com/wp-content/uploads/2013/01/Bing-Hd-Wallpapers-3.jpg",
+                    "items": null,
+                    "contact": null
+                },
+                "3": {
+                    "title": "Nested Three",
+                    "short": "item",
+                    "long": null,
+                    "image": "http://img0.mxstatic.com/wallpapers/487430e0d646b20f5604610df2a005e6_large.jpeg",
+                    "items": [
+                        {
+                            "title": "Nested Four",
+                            "id": "4",
+                            "image": "http://wallpapercave.com/wp/2szn90w.jpg"
+                        }
+                    ],
+                    "contact": null
+                },
+                "4": {
+                    "title": "Nested Four",
+                    "short": "item",
+                    "long": null,
+                    "image": "http://wallpapercave.com/wp/2szn90w.jpg",
+                    "items": [
+                        {
+                            "title": "Nested Three",
+                            "id": "3",
+                            "image": "http://img0.mxstatic.com/wallpapers/487430e0d646b20f5604610df2a005e6_large.jpeg"
+                        }
+                    ],
+                    "contact": null
+                },
+                "5": {
+                    "title": "Nested Five",
+                    "short": "item",
+                    "long": null,
+                    "image": "http://desktopwallpaperswide.com/wp-content/uploads/2013/01/Bing-Hd-Wallpapers-3.jpg",
+                    "items": null,
+                    "contact": null
+                }
+            }
         }
     ]
 }
